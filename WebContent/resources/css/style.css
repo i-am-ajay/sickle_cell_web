@@ -1,0 +1,135 @@
+.border-length {
+  border-length: 80%;
+  border-top-color: #DFDFDF;
+  border-top-width: 1px;
+  border-top-style: solid;
+  margin: 3px;
+  margin-top: 5px; }
+
+.form-control-xs {
+  height: calc(1.5em + .5rem + 2px) !important;
+  padding: .125rem .25rem !important;
+  font-size: .75rem !important;
+  line-height: 1.5;
+  border-radius: .2rem; }
+
+.btn-xs{
+  height: calc(1.5em + .5em + 2px) !important;
+  padding: .125rem .25rem !important;
+  font-size: .75rem !important;
+  border-radius: .2rem;
+  text-align: center; 
+}
+.headings {
+  font-size: 1.5em; 
+}
+
+.title{
+	font-size: 1.2em;
+}
+
+.port-item:hover{
+	opacity : 0.5;
+	cursor: pointer;
+}
+
+.row{
+	margin-left : 5px;
+	margin-right : 5px;
+}
+
+#top-section img {
+  height: 180px;
+  width: 100%; 
+}
+
+#top-section #empcode {
+  font-size: 0.5em; }
+
+#top-section #designation {
+  background-color: #000; }
+
+#top-section #social-media .fa {
+  font-size: 2em; }
+
+#top-section .port-item {
+  font-size: 2em; }
+
+#details_section {
+  margin-bottom: 50px;
+  font-size: 1.1em; }
+  
+  #details_section input[type=text] {
+    color: #000;
+    font-size: 0.8em;
+    font-weight: bold; }
+  #details_section #details_button {
+    margin-top: -10px; }
+  #details_section #second-row {
+    margin-bottom: 0px; }
+  #details_section #distt_style {
+    font-size: 0.8em; }
+  #details_section .row {
+    margin-top: 2px; }
+  #details_section .right-section {
+    padding: 0px;
+    padding-top: 3px; }
+  #details_section .address_section {
+    padding-left: 45px;
+    padding-right: 35px;
+    margin-left: -12px; }
+    
+  #details_section .border_bottom{
+  	margin : 5px;
+  	margin-bottom : 5px;
+  	box-shadow : 0 3px rgba(2, 117, 216,1);
+  }
+  
+  #details_section input{
+  	border-color: rgba(2, 117, 216,0.3);
+  }
+
+#contracts_section {
+  margin-bottom: 50px; }
+  #contracts_section table thead {
+    color: #ffffff;
+    background-color: rgba(41, 43, 44, 0.9); }
+  #contracts_section #contract_form {
+    margin: 5px;
+    box-shadow: 0 3px rgba(42, 111, 55, 0.5); }
+  #contracts_section #btn {
+    p: 0px; }
+
+#promotion_section {
+  margin-bottom: 50px; }
+  #promotion_section table thead {
+    color: #ffffff;
+    background-color: rgba(41, 43, 44, 0.9); }
+  #promotion_section table td {
+    height: 10px; }
+  #promotion_section #promotion_form {
+    margin: 5px;
+    box-shadow: 0 3px rgba(44, 132, 154, 0.8); }
+  #promotion_section #btn {
+    p: 0px; }
+
+#degree_section {
+  margin-bottom: 50px; }
+  #degree_section table thead {
+    color: #ffffff;
+    background-color: rgba(41, 43, 44, 0.9); }
+  #degree_section table td {
+    height: 10px; }
+  #degree_section #degree_form {
+    margin: 5px;
+    box-shadow: 0 3px rgba(200, 29, 17, 0.8); }
+  #degree_section #degree_btn {
+    text-align: center;
+    p: 0px; }
+
+#footer {
+  font-size: 0.7em;
+  margin-top: 100px; }
+
+#example thead {
+  width: 100%; }

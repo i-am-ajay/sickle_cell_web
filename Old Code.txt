@@ -1,0 +1,17 @@
+  <!-- Logic To calculate Age -->
+  <%!
+  	int ageYear,ageMonth, ageDays = 0;
+  	int serviceYear, serviceMonth, serviceDays = 0;
+  public String getPeriod(LocalDate date){
+	  	if(date == null){
+	  		return null;
+	  	}
+  		Period p = Period.between(date,LocalDate.now());
+  		String s = p.getYears()+"Y "+p.getMonths()+"M "+p.getDays()+"D";
+  		return s;
+  	}
+  %>
+  <%
+  	ConsultantComponent details = (ConsultantComponent)request.getAttribute("consultant");
+  	String age = getPeriod(details.getDob());
+  %>
