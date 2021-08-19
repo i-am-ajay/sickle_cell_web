@@ -25,6 +25,7 @@ public class PatientMedicalRecord {
 	private String icmrId;
 	private String referred;
 	private String diagnosis;
+	private String finalDiagnosis;
 	@Column(name="date_record")
 	@DateTimeFormat(iso=ISO.DATE)
 	private LocalDate dateofRecord;
@@ -81,5 +82,11 @@ public class PatientMedicalRecord {
 	}
 	public void setDateofClinicalExamination(LocalDate dateofClinicalExamination) {
 		this.dateofClinicalExamination = dateofClinicalExamination;
+	}
+	public String getFinalDiagnosis() {
+		return finalDiagnosis;
+	}
+	public void setFinalDiagnosis(String finalDiagnosis) {
+		this.finalDiagnosis = finalDiagnosis;
 	}
 }

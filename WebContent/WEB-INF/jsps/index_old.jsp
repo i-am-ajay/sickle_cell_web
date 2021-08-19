@@ -34,7 +34,8 @@
 					<!-- Top Section With patient Name Registration and other detail -->
 					<div class="d-flex flex-column">
 						<div id="social-media"
-							class="d-flex flex-row justify-content-between align-items-center text-white bg-dark pr-5">
+							class="d-flex flex-row justify-content-between align-items-center text-white bg-dark pr-5 fixed-top mx-auto" 
+							style="width:90%">
 							<h2 class="display-4 bg-dark text-white text-left px-3">Sickle Cell Performa
 							</h2>
 							<div data-toggle="modal" data-target="#user">
@@ -98,7 +99,7 @@
 
 						<!-- Designation Line On the Page -->
 						<div>
-							<div id="designation" class="text-white p-2">User Details</div>
+							<div id="designation" style="margin-top:70px" class="text-white p-2">User Details</div>
 						</div>
 
 						<!-- Top Menu -> Link for various pages.  -->
@@ -205,7 +206,7 @@
 					    	<div class="form-group text-left">
 					      		<label class="text-monospace">Final Diagnosis</label>
 					      		<sf:input id="diagnosis_id" class="form-control form-control-sm" 
-					      			path="record.diagnosis"/>
+					      			path="record.finalDiagnosis"/>
 					    	</div>
 					    </div>
 					    <div class="col-md-2">
@@ -261,6 +262,13 @@
 					      		<label class="text-monospace">ICMR ID</label>
 					      		<sf:input id="icmr_id_id" class="form-control form-control-sm" 
 					      			path="record.icmrId"/>
+					    	</div>
+					    </div>
+					    <div class="col-md-2">
+					    	<div class="form-group text-left">
+					      		<label class="text-monospace">Diagnosis</label>
+					      		<sf:input id="icmr_id_id" class="form-control form-control-sm" 
+					      			path="record.diagnosis"/>
 					    	</div>
 					    </div>
 					    
@@ -394,6 +402,12 @@
 					      		<sf:input id="non_tribal_id" class="form-control form-control-sm"  path="socioDemo.nonTribal"/>
 					    	</div>
 					    </div>
+					    <div class="col-md-2">
+					    	<div class="form-group text-left">
+					      		<label class="text-monospace">Monthly Family Inc</label>
+					      		<sf:input id="mother_occupation_id" class="form-control form-control-sm"  path="socioDemo.monthlyIncome"/>
+					    	</div>
+					    </div>
 					    </div>
 					    <div class="form-group row mb-0 pb-0">
 					    <div class="col-md-2">
@@ -421,12 +435,7 @@
 					      		<sf:input id="mother_occupation_id" class="form-control form-control-sm"  path="mother.relationOccupation"/>
 					    	</div>
 					    </div>
-					    <div class="col-md-2">
-					    	<div class="form-group text-left">
-					      		<label class="text-monospace">Monthly Family Inc</label>
-					      		<sf:input id="mother_occupation_id" class="form-control form-control-sm"  path="socioDemo.monthlyIncome"/>
-					    	</div>
-					    </div>
+					    
 				</div>
 		</div>
 		</section>
@@ -437,6 +446,47 @@
 			<!-- class="collapse" -->
 			<div class="bg-success py-2 text-white text-center headings">Feature
 				& Examination</div>
+			<div class="form-body bg-light py-2 border text-center mx-1">
+				<div class="form-group row mb-0 pb-0">
+					 
+					 <div class="col-md-3 text-left">
+					 		<label class="text-monospace text-left">Age Of Presentation</label>
+					 		<div class="row">
+						    	<div class="form-group text-left col-md-6">
+						      		<sf:input id="mother_occupation_id" class="form-control form-control-sm"  path="patientExamination.presentationAgeInYear" placeholder="Year"/>
+						    	</div>
+						    	<div class="form-group text-left col-md-6">
+						      		<sf:input id="mother_occupation_id" class="form-control form-control-sm"  path="patientExamination.presentationAgeInYear" Placeholder="Month"/>
+						    	</div>
+					    	</div>
+				     </div>
+				     <div class="col-md-3 text-left">
+					 		<label class="text-monospace text-left">Age At Diagnosis</label>
+					 		<div class="row">
+						    	<div class="form-group text-left col-md-6">
+						      		<sf:input id="mother_occupation_id" class="form-control form-control-sm"  path="patientExamination.ageAtDignosisYear" placeholder="Year"/>
+						    	</div>
+						    	<div class="form-group text-left col-md-6">
+						      		<sf:input id="mother_occupation_id" class="form-control form-control-sm"  path="patientExamination.ageAtDignosisMonth" Placeholder="Month"/>
+						    	</div>
+					    	</div>
+				     </div>
+				     <div class="col-md-3 text-left">
+					 		<label class="text-monospace text-left">Current Age Of Patient</label>
+					 		<div class="row">
+						    	<div class="form-group text-left col-md-6">
+						      		<sf:input id="mother_occupation_id" class="form-control form-control-sm"  path="patientExamination.currentAgeYear" placeholder="Year"/>
+						    	</div>
+						    	<div class="form-group text-left col-md-6">
+						      		<sf:input id="mother_occupation_id" class="form-control form-control-sm"  path="patientExamination.currentAgeMonth" Placeholder="Month"/>
+						    	</div>
+					    	</div>
+				     </div>
+				     
+				</div>
+				<div class="form-group row mb-0 pb-0">
+				</div>
+			</div>
 		</section>
 
 

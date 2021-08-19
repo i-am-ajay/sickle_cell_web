@@ -26,13 +26,16 @@ public class Examination {
 	PatientInformation patientInfoByReg;
 	
 	@Column(name="presentation_age_year")
-	private int presentationAgeInYear;
+	private Integer presentationAgeInYear;
 	
 	@Column(name="prestion_age_month")
-	private int presentationAgeInMonth;
+	private Integer presentationAgeInMonth;
 	
-	@Column(name="age_dignosis")
-	private int ageAtDignosis;
+	@Column(name="age_dignosis_year")
+	private Integer ageAtDignosisYear;
+	
+	@Column(name="age_dignosis_month")
+	private Integer ageAtDignosisMonth;
 	
 	@Column(name="presenting_pallor")
 	private boolean presentingPallor;
@@ -53,10 +56,10 @@ public class Examination {
 	private boolean presentingFatigue;
 	
 	@Column(name="current_age_year")
-	private int currentAgeYear;
+	private Integer currentAgeYear;
 	
 	@Column(name="current_age_month")
-	private int currentAgeMonth;
+	private Integer currentAgeMonth;
 	
 	// Family History
 	
@@ -113,28 +116,36 @@ public class Examination {
 	@Column(name="abnormnalities_detail")
 	private String abnormalitiesDetail;
 
-	public int getPresentationAgeInYear() {
+	public Integer getPresentationAgeInYear() {
 		return presentationAgeInYear;
 	}
 
-	public void setPresentationAgeInYear(int presentationAgeInYear) {
+	public void setPresentationAgeInYear(Integer presentationAgeInYear) {
 		this.presentationAgeInYear = presentationAgeInYear;
 	}
 
-	public int getPresentationAgeInMonth() {
+	public Integer getPresentationAgeInMonth() {
 		return presentationAgeInMonth;
 	}
 
-	public void setPresentationAgeInMonth(int presentationAgeInMonth) {
+	public void setPresentationAgeInMonth(Integer presentationAgeInMonth) {
 		this.presentationAgeInMonth = presentationAgeInMonth;
 	}
-
-	public int getAgeAtDignosis() {
-		return ageAtDignosis;
+	
+	public Integer getAgeAtDignosisYear() {
+		return ageAtDignosisYear;
 	}
 
-	public void setAgeAtDignosis(int ageAtDignosis) {
-		this.ageAtDignosis = ageAtDignosis;
+	public void setAgeAtDignosisYear(Integer ageAtDignosisYear) {
+		this.ageAtDignosisYear = ageAtDignosisYear;
+	}
+
+	public Integer getAgeAtDignosisMonth() {
+		return ageAtDignosisMonth;
+	}
+
+	public void setAgeAtDignosisMonth(Integer ageAtDignosisMonth) {
+		this.ageAtDignosisMonth = ageAtDignosisMonth;
 	}
 
 	public boolean isPresentingPallor() {
@@ -183,22 +194,6 @@ public class Examination {
 
 	public void setPresentingFatigue(boolean presentingFatigue) {
 		this.presentingFatigue = presentingFatigue;
-	}
-
-	public int getCurrentAgeYear() {
-		return currentAgeYear;
-	}
-
-	public void setCurrentAgeYear(int currentAgeYear) {
-		this.currentAgeYear = currentAgeYear;
-	}
-
-	public int getCurrentAgeMonth() {
-		return currentAgeMonth;
-	}
-
-	public void setCurrentAgeMonth(int currentAgeMonth) {
-		this.currentAgeMonth = currentAgeMonth;
 	}
 
 	public boolean isCurrentDyspnoea() {
@@ -356,4 +351,24 @@ public class Examination {
 	public String getRegNo() {
 		return regNo;
 	}
+
+	public void setCurrentAgeYear(Integer currentAgeYear) {
+		this.currentAgeYear = currentAgeYear;
+	}
+
+	public void setCurrentAgeMonth(Integer currentAgeMonth) {
+		this.currentAgeMonth = currentAgeMonth;
+	}
+
+	public Integer getCurrentAgeYear() {
+		return currentAgeYear;
+	}
+
+	public Integer getCurrentAgeMonth() {
+		return currentAgeMonth;
+	}
+	
+	
+	
+	
 }
