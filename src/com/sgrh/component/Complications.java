@@ -25,236 +25,253 @@ public class Complications {
 	PatientInformation patientInfoByReg;
 	
 	@Column(name="pain_ful_crisis")
-	private boolean painFulCrisis;
+	private Boolean painFulCrisis;
 	public String getRegNo() {
 		return regNo;
 	}
 	@Column(name="crisis_requiring_hospitalization")
-	private int crisisRequiringHospitalization;
+	private Integer crisisRequiringHospitalization;
 	@Column(name="crisis_in_last_12months")
-	private int crisisInLast12Months;
+	private Integer crisisInLast12Months;
 	@Column(name="acute_chest_syndrom")
-	private boolean acuteChestSyndrom;
+	private Boolean acuteChestSyndrom;
 	@Column(name="o2_support")
-	private boolean o2Support;
+	private Boolean o2Support;
 	@Column(name="o2_support_type")
 	private String O2SupportType;
+	
 	@Column(name="exchange_transfusion")
-	private boolean exchangeTransfusion;
+	private Boolean exchangeTransfusion;
 	@Column(name="hydroxy_urea")
-	private boolean hydroxyurea;
+	private Boolean hydroxyurea;
 	@Column(name="hyper_hemolytic_crisis")
-	private boolean hyperHemolyticCrisis;
+	private Boolean hyperHemolyticCrisis;
 	@Column(name="num_of_pain_crisis_before_hydroxyurea")
-	private int numOfPainCrisisBeforeHydroxyUrea;
+	private Integer numOfPainCrisisBeforeHydroxyUrea;
 	@Column(name="num_of_pain_crisis_after_hydroxy_urea")
-	private int numOfPainCrisisAfterHydroxyUrea;
+	private Integer numOfPainCrisisAfterHydroxyUrea;
 	
 	// Neurological
 	@Column(name="neuro_logical_abnormalities")
-	private boolean neurologicalAbnormalities;
+	private Boolean neurologicalAbnormalities;
 	// previous true then
-	private boolean stroke;
+	private Boolean stroke;
 	@Column(name="neuro_imaging")
-	private boolean neuroimaging;
-	private boolean ct;
+	private Boolean neuroimaging;
+	private Boolean ct;
 	@Column(name="ct_details")
 	private String ctDetails;
 	
-	private boolean mri;
+	private Boolean mri;
 	@Column(name="mri_details")
 	private String mriDetails;
 	
 	@Column(name="rec_blood_transfusion")
-	private boolean recBloodTransfusion;
+	private Boolean recBloodTransfusion;
 	@Column(name="rec_echange_transfusion")
-	private boolean recExchangeTransfusion;
+	private Boolean recExchangeTransfusion;
 	@Column(name="hbs_level")
 	private double hbsLevel;
-	private boolean seizures;
+	private Boolean seizures;
 	@Column(name="cognitive_dysfunction")
-	private boolean cognitiveDysfunction;
+	private Boolean cognitiveDysfunction;
 	@Column(name="any_other_deficits")
-	private boolean anyOtherDeficits;
+	private Boolean anyOtherDeficits;
 	
 	// doppler
 	@Column(name="transactional_doppler")
-	private boolean transactionalDoppler;
+	private Boolean transactionalDoppler;
 	@Column(name="is_chemic_attack")
-	private boolean ischemicAttack;
+	private Boolean ischemicAttack;
 	@Column(name="neuropathic_pain")
-	private boolean neuropathicPain;
+	private Boolean neuropathicPain;
 	@Column(name="other_neurological_abnormalities")
-	private boolean otherNeurologicalAbnormalities;
+	private Boolean otherNeurologicalAbnormalities;
 	@Column(name="neurological_abnormalities_details")
 	private String neurologicalAbnormalitiesDetails;
 	
 	// renal
 	@Column(name="renal_involvement")
-	private boolean renalInvolvement;
-	@Column(name="renal_involvement_type")
-	private String renalInvolvementType;
-	@Column(name="urin_protein")
-	private boolean urineProtein;
-	@Column(name="blood_urea")
-	private boolean bloodUrea;
-	@Column(name="serum_creatnine")
-	private boolean serumCreatnine;
-	@Column(name="serum_albumin")
-	private boolean serumalbumin;
+	private Boolean renalInvolvement;
 	
-	private boolean dialysis;
+	@Column(name="facial_puffiness")
+	private Boolean facialPuffiness;
+	
+	@Column(name="decreased_urine_output")
+	private Boolean decreasedUrineOutput;
+	
+	@Column(name="blood_in_urine")
+	private Boolean bloodInUrine;
+	
+	@Column(name="other_symptoms")
+	private Boolean otherSymptoms;
+	
+	@Column(name="urin_protein")
+	private Boolean urineProtein;
+	@Column(name="blood_urea")
+	private String bloodUrea;
+	@Column(name="serum_creatnine")
+	private String serumCreatnine;
+	@Column(name="serum_albumin")
+	private String serumAlbumin;
+	
+	private Boolean dialysis;
 	@Column(name = "ace_inchibitors")
-	private boolean aceInhibitors;
-	private boolean swelling;
+	private Boolean aceInhibitors;
+	private Boolean swelling;
 	@Column(name="leg_ulcer")
-	private boolean legUlcer;
+	private Boolean legUlcer;
 	@Column(name="hepatobillary_involvement")
-	private boolean hepatobillaryInvolvement;
+	private Boolean hepatobillaryInvolvement;
 	// previous true then
-	private boolean gallstone;
+	private Boolean gallstone;
 	// previous true then
-	private boolean cholecystectomy;
+	private Boolean cholecystectomy;
 	@Column(name="sBilirubini_total")
 	private double sBilirubinTotal;
-	@Column(name="sBilirubin_total")
+	@Column(name="sBilirubin_direct")
 	private double sBilirubinDirect;
 	@Column(name="hepatitis_BAntigen")
-	private boolean hepatitisBAntigen; // P or N
+	private Boolean hepatitisBAntigen; // P or N
 	@Column(name="anti_HAV")
-	private boolean antiHAV; 
+	private Boolean antiHAV; 
 	@Column(name="anti_HCV")
-	private boolean antiHCV;
+	private Boolean antiHCV;
 	@Column(name="hepatic_encephalopathy")
-	private boolean hepaticEncephalopathy;
+	private Boolean hepaticEncephalopathy;
 	
-	private boolean priapism;
+	private Boolean priapism;
 	// privious true then
 	@Column(name="managed_at_home")
-	private boolean managedAtHome;
+	private Boolean managedAtHome;
 	@Column(name="managed_at_hospital")
-	private boolean managedAtHospital;
+	private Boolean managedAtHospital;
 	@Column(name="intracavernosal_aspiration")
-	private boolean intracavernosalAspiration;
+	private Boolean intracavernosalAspiration;
 	@Column(name="alpha_agonist")
-	private boolean alphaAgonist;
+	private Boolean alphaAgonist;
 	@Column(name="exchange_transfusino")
-	private boolean exchangeTranfusion;
+	private Boolean exchangeTranfusion;
 	@Column(name="surgical_shunt")
-	private boolean surgicalShunt;
+	private Boolean surgicalShunt;
 	@Column(name="erectile_dysfunction")
-	private boolean erectileDysfunction;
+	private Boolean erectileDysfunction;
 	
 	@Column(name="resolution_of_priapism")
 	private double resolutionOfPriapism;
 	// next section
 	@Column(name="splenic_cusis")
-	private boolean splenicCusis;
+	private Boolean splenicCusis;
 	// previous true then
 	
 	@Column(name="spl_blood_transfusion")
-	private boolean splBloodTransfusion;
+	private Boolean splBloodTransfusion;
 	
 	// next section
 	@Column(name="aplastic_cusis")
-	private boolean aplasticCusis;
+	private Boolean aplasticCusis;
 	// previous true then
 	@Column(name="apl_blood_transfusion")
-	private boolean aplBloodTransfusion;
+	private Boolean aplBloodTransfusion;
 	
 	// next section
 	@Column(name="cardiac_involvement")
-	private boolean cardiacInvolvement;
+	private Boolean cardiacInvolvement;
 	// previous true then
-	private boolean cardiomegaly;
+	private Boolean cardiomegaly;
 	@Column(name="left_ventricular")
-	private boolean leftVentricular;
+	private Boolean leftVentricular;
 	@Column(name="pulmonary_hypertenstion")
-	private boolean pulmonaryHypertension;
+	private Boolean pulmonaryHypertension;
 	@Column(name="decreased_lvef")
-	private boolean decreasedLVEF;
+	private Boolean decreasedLVEF;
 	@Column(name="lvef_type")
 	private String lvefType;
 	
 	// next section
 	@Column(name="eye_involvement")
-	private boolean eyeInvolvement;
+	private Boolean eyeInvolvement;
 	// previous true then
 	@Column(name="sickle_retinopathy")
-	private boolean sickleRetinopathy;
+	private Boolean sickleRetinopathy;
 	
 	@Column(name="neovascularization")
-	private boolean neovascularization;
+	private Boolean neovascularization;
 	@Column(name="vitreous_hemorrphage")
-	private boolean vitreousHemorrphage;
+	private Boolean vitreousHemorrphage;
 	@Column(name="retinal_detachment")
-	private boolean retinalDetachment;
+	private Boolean retinalDetachment;
 	@Column(name="retinal_breaks")
-	private boolean retinalBreaks;
+	private Boolean retinalBreaks;
 	// next section
 	@Column(name="iron_overloaded")
-	private boolean ironOverloaded;
+	private Boolean ironOverloaded;
 	// previous true then
 	@Column(name="iron_overloaded_type")
 	private String ironOverloadedType;
 	// next section
 	@Column(name="history_of_infection")
-	private boolean historyOfInfection;
+	private Boolean historyOfInfection;
 	// previous true then
 	@Column(name="hospital_addmission")
-	private boolean hospitalAddmission;
+	private Boolean hospitalAddmission;
 	@Column(name="blood_culture")
-	private boolean bloodCulture;
+	private Boolean bloodCulture;
 	// previous true then
 	@Column(name="blood_culture_pos_neg")
-	private boolean bloodCulturePosOrNeg;
+	private Boolean bloodCulturePosOrNeg;
 	// previous true then
 	private String organism;
 	
 	// Vaccination
-	private boolean vaccination;
+	private Boolean vaccination;
 	// previous true then
 	@Column(name="hib_vaccine")
-	private boolean hibVaccine;
+	private Boolean hibVaccine;
 	@Column(name="pheumococaal_vaccine")
-	private boolean pheumococcalVaccine;
+	private Boolean pheumococcalVaccine;
 	@Column(name="meningococcal_vaccine")
-	private boolean meningococcalVaccine;
+	private Boolean meningococcalVaccine;
 	@Column(name="typoid_vaccine")
-	private boolean typhoidVaccine;
+	private Boolean typhoidVaccine;
 	@Column(name="flu_vaccine")
-	private boolean fluVaccine;
+	private Boolean fluVaccine;
 	@Column(name="infection_type")
 	private String typeOfInfection;
-	
-	public boolean isPainFulCrisis() {
+	public PatientInformation getPatientInfoByReg() {
+		return patientInfoByReg;
+	}
+	public void setPatientInfoByReg(PatientInformation patientInfoByReg) {
+		this.patientInfoByReg = patientInfoByReg;
+	}
+	public Boolean getPainFulCrisis() {
 		return painFulCrisis;
 	}
-	public void setPainFulCrisis(boolean painFulCrisis) {
+	public void setPainFulCrisis(Boolean painFulCrisis) {
 		this.painFulCrisis = painFulCrisis;
 	}
-	public int getCrisisRequiringHospitalization() {
+	public Integer getCrisisRequiringHospitalization() {
 		return crisisRequiringHospitalization;
 	}
-	public void setCrisisRequiringHospitalization(int crisisRequiringHospitalization) {
+	public void setCrisisRequiringHospitalization(Integer crisisRequiringHospitalization) {
 		this.crisisRequiringHospitalization = crisisRequiringHospitalization;
 	}
-	public int getCrisisInLast12Months() {
+	public Integer getCrisisInLast12Months() {
 		return crisisInLast12Months;
 	}
-	public void setCrisisInLast12Months(int crisisInLast12Months) {
+	public void setCrisisInLast12Months(Integer crisisInLast12Months) {
 		this.crisisInLast12Months = crisisInLast12Months;
 	}
-	public boolean isAcuteChestSyndrom() {
+	public Boolean getAcuteChestSyndrom() {
 		return acuteChestSyndrom;
 	}
-	public void setAcuteChestSyndrom(boolean acuteChestSyndrom) {
+	public void setAcuteChestSyndrom(Boolean acuteChestSyndrom) {
 		this.acuteChestSyndrom = acuteChestSyndrom;
 	}
-	public boolean isO2Support() {
+	public Boolean getO2Support() {
 		return o2Support;
 	}
-	public void setO2Support(boolean o2Support) {
+	public void setO2Support(Boolean o2Support) {
 		this.o2Support = o2Support;
 	}
 	public String getO2SupportType() {
@@ -263,58 +280,58 @@ public class Complications {
 	public void setO2SupportType(String o2SupportType) {
 		O2SupportType = o2SupportType;
 	}
-	public boolean isExchangeTransfusion() {
+	public Boolean getExchangeTransfusion() {
 		return exchangeTransfusion;
 	}
-	public void setExchangeTransfusion(boolean exchangeTransfusion) {
+	public void setExchangeTransfusion(Boolean exchangeTransfusion) {
 		this.exchangeTransfusion = exchangeTransfusion;
 	}
-	public boolean isHydroxyurea() {
+	public Boolean getHydroxyurea() {
 		return hydroxyurea;
 	}
-	public void setHydroxyurea(boolean hydroxyurea) {
+	public void setHydroxyurea(Boolean hydroxyurea) {
 		this.hydroxyurea = hydroxyurea;
 	}
-	public boolean isHyperHemolyticCrisis() {
+	public Boolean getHyperHemolyticCrisis() {
 		return hyperHemolyticCrisis;
 	}
-	public void setHyperHemolyticCrisis(boolean hyperHemolyticCrisis) {
+	public void setHyperHemolyticCrisis(Boolean hyperHemolyticCrisis) {
 		this.hyperHemolyticCrisis = hyperHemolyticCrisis;
 	}
-	public int getNumOfPainCrisisBeforeHydroxyUrea() {
+	public Integer getNumOfPainCrisisBeforeHydroxyUrea() {
 		return numOfPainCrisisBeforeHydroxyUrea;
 	}
-	public void setNumOfPainCrisisBeforeHydroxyUrea(int numOfPainCrisisBeforeHydroxyUrea) {
+	public void setNumOfPainCrisisBeforeHydroxyUrea(Integer numOfPainCrisisBeforeHydroxyUrea) {
 		this.numOfPainCrisisBeforeHydroxyUrea = numOfPainCrisisBeforeHydroxyUrea;
 	}
-	public int getNumOfPainCrisisAfterHydroxyUrea() {
+	public Integer getNumOfPainCrisisAfterHydroxyUrea() {
 		return numOfPainCrisisAfterHydroxyUrea;
 	}
-	public void setNumOfPainCrisisAfterHydroxyUrea(int numOfPainCrisisAfterHydroxyUrea) {
+	public void setNumOfPainCrisisAfterHydroxyUrea(Integer numOfPainCrisisAfterHydroxyUrea) {
 		this.numOfPainCrisisAfterHydroxyUrea = numOfPainCrisisAfterHydroxyUrea;
 	}
-	public boolean isNeurologicalAbnormalities() {
+	public Boolean getNeurologicalAbnormalities() {
 		return neurologicalAbnormalities;
 	}
-	public void setNeurologicalAbnormalities(boolean neurologicalAbnormalities) {
+	public void setNeurologicalAbnormalities(Boolean neurologicalAbnormalities) {
 		this.neurologicalAbnormalities = neurologicalAbnormalities;
 	}
-	public boolean isStroke() {
+	public Boolean getStroke() {
 		return stroke;
 	}
-	public void setStroke(boolean stroke) {
+	public void setStroke(Boolean stroke) {
 		this.stroke = stroke;
 	}
-	public boolean isNeuroimaging() {
+	public Boolean getNeuroimaging() {
 		return neuroimaging;
 	}
-	public void setNeuroimaging(boolean neuroimaging) {
+	public void setNeuroimaging(Boolean neuroimaging) {
 		this.neuroimaging = neuroimaging;
 	}
-	public boolean isCt() {
+	public Boolean getCt() {
 		return ct;
 	}
-	public void setCt(boolean ct) {
+	public void setCt(Boolean ct) {
 		this.ct = ct;
 	}
 	public String getCtDetails() {
@@ -323,10 +340,10 @@ public class Complications {
 	public void setCtDetails(String ctDetails) {
 		this.ctDetails = ctDetails;
 	}
-	public boolean isMri() {
+	public Boolean getMri() {
 		return mri;
 	}
-	public void setMri(boolean mri) {
+	public void setMri(Boolean mri) {
 		this.mri = mri;
 	}
 	public String getMriDetails() {
@@ -335,16 +352,16 @@ public class Complications {
 	public void setMriDetails(String mriDetails) {
 		this.mriDetails = mriDetails;
 	}
-	public boolean isRecBloodTransfusion() {
+	public Boolean getRecBloodTransfusion() {
 		return recBloodTransfusion;
 	}
-	public void setRecBloodTransfusion(boolean recBloodTransfusion) {
+	public void setRecBloodTransfusion(Boolean recBloodTransfusion) {
 		this.recBloodTransfusion = recBloodTransfusion;
 	}
-	public boolean isRecExchangeTransfusion() {
+	public Boolean getRecExchangeTransfusion() {
 		return recExchangeTransfusion;
 	}
-	public void setRecExchangeTransfusion(boolean recExchangeTransfusion) {
+	public void setRecExchangeTransfusion(Boolean recExchangeTransfusion) {
 		this.recExchangeTransfusion = recExchangeTransfusion;
 	}
 	public double getHbsLevel() {
@@ -353,46 +370,46 @@ public class Complications {
 	public void setHbsLevel(double hbsLevel) {
 		this.hbsLevel = hbsLevel;
 	}
-	public boolean isSeizures() {
+	public Boolean getSeizures() {
 		return seizures;
 	}
-	public void setSeizures(boolean seizures) {
+	public void setSeizures(Boolean seizures) {
 		this.seizures = seizures;
 	}
-	public boolean isCognitiveDysfunction() {
+	public Boolean getCognitiveDysfunction() {
 		return cognitiveDysfunction;
 	}
-	public void setCognitiveDysfunction(boolean cognitiveDysfunction) {
+	public void setCognitiveDysfunction(Boolean cognitiveDysfunction) {
 		this.cognitiveDysfunction = cognitiveDysfunction;
 	}
-	public boolean isAnyOtherDeficits() {
+	public Boolean getAnyOtherDeficits() {
 		return anyOtherDeficits;
 	}
-	public void setAnyOtherDeficits(boolean anyOtherDeficits) {
+	public void setAnyOtherDeficits(Boolean anyOtherDeficits) {
 		this.anyOtherDeficits = anyOtherDeficits;
 	}
-	public boolean isTransactionalDoppler() {
+	public Boolean getTransactionalDoppler() {
 		return transactionalDoppler;
 	}
-	public void setTransactionalDoppler(boolean transactionalDoppler) {
+	public void setTransactionalDoppler(Boolean transactionalDoppler) {
 		this.transactionalDoppler = transactionalDoppler;
 	}
-	public boolean isIschemicAttack() {
+	public Boolean getIschemicAttack() {
 		return ischemicAttack;
 	}
-	public void setIschemicAttack(boolean ischemicAttack) {
+	public void setIschemicAttack(Boolean ischemicAttack) {
 		this.ischemicAttack = ischemicAttack;
 	}
-	public boolean isNeuropathicPain() {
+	public Boolean getNeuropathicPain() {
 		return neuropathicPain;
 	}
-	public void setNeuropathicPain(boolean neuropathicPain) {
+	public void setNeuropathicPain(Boolean neuropathicPain) {
 		this.neuropathicPain = neuropathicPain;
 	}
-	public boolean isOtherNeurologicalAbnormalities() {
+	public Boolean getOtherNeurologicalAbnormalities() {
 		return otherNeurologicalAbnormalities;
 	}
-	public void setOtherNeurologicalAbnormalities(boolean otherNeurologicalAbnormalities) {
+	public void setOtherNeurologicalAbnormalities(Boolean otherNeurologicalAbnormalities) {
 		this.otherNeurologicalAbnormalities = otherNeurologicalAbnormalities;
 	}
 	public String getNeurologicalAbnormalitiesDetails() {
@@ -401,82 +418,100 @@ public class Complications {
 	public void setNeurologicalAbnormalitiesDetails(String neurologicalAbnormalitiesDetails) {
 		this.neurologicalAbnormalitiesDetails = neurologicalAbnormalitiesDetails;
 	}
-	public boolean isRenalInvolvement() {
+	public Boolean getRenalInvolvement() {
 		return renalInvolvement;
 	}
-	public void setRenalInvolvement(boolean renalInvolvement) {
+	public void setRenalInvolvement(Boolean renalInvolvement) {
 		this.renalInvolvement = renalInvolvement;
 	}
-	public String getRenalInvolvementType() {
-		return renalInvolvementType;
+	public Boolean getFacialPuffiness() {
+		return facialPuffiness;
 	}
-	public void setRenalInvolvementType(String renalInvolvementType) {
-		this.renalInvolvementType = renalInvolvementType;
+	public void setFacialPuffiness(Boolean facialPuffiness) {
+		this.facialPuffiness = facialPuffiness;
 	}
-	public boolean isUrineProtein() {
+	public Boolean getDecreasedUrineOutput() {
+		return decreasedUrineOutput;
+	}
+	public void setDecreasedUrineOutput(Boolean decreasedUrineOutput) {
+		this.decreasedUrineOutput = decreasedUrineOutput;
+	}
+	public Boolean getBloodInUrine() {
+		return bloodInUrine;
+	}
+	public void setBloodInUrine(Boolean bloodInUrine) {
+		this.bloodInUrine = bloodInUrine;
+	}
+	public Boolean getOtherSymptoms() {
+		return otherSymptoms;
+	}
+	public void setOtherSymptoms(Boolean otherSymptoms) {
+		this.otherSymptoms = otherSymptoms;
+	}
+	public Boolean getUrineProtein() {
 		return urineProtein;
 	}
-	public void setUrineProtein(boolean urineProtein) {
+	public void setUrineProtein(Boolean urineProtein) {
 		this.urineProtein = urineProtein;
 	}
-	public boolean isBloodUrea() {
+	public String getBloodUrea() {
 		return bloodUrea;
 	}
-	public void setBloodUrea(boolean bloodUrea) {
+	public void setBloodUrea(String bloodUrea) {
 		this.bloodUrea = bloodUrea;
 	}
-	public boolean isSerumCreatnine() {
+	public String getSerumCreatnine() {
 		return serumCreatnine;
 	}
-	public void setSerumCreatnine(boolean serumCreatnine) {
+	public void setSerumCreatnine(String serumCreatnine) {
 		this.serumCreatnine = serumCreatnine;
 	}
-	public boolean isSerumalbumin() {
-		return serumalbumin;
+	public String getSerumAlbumin() {
+		return serumAlbumin;
 	}
-	public void setSerumalbumin(boolean serumalbumin) {
-		this.serumalbumin = serumalbumin;
+	public void setSerumAlbumin(String serumAlbumin) {
+		this.serumAlbumin = serumAlbumin;
 	}
-	public boolean isDialysis() {
+	public Boolean getDialysis() {
 		return dialysis;
 	}
-	public void setDialysis(boolean dialysis) {
+	public void setDialysis(Boolean dialysis) {
 		this.dialysis = dialysis;
 	}
-	public boolean isAceInhibitors() {
+	public Boolean getAceInhibitors() {
 		return aceInhibitors;
 	}
-	public void setAceInhibitors(boolean aceInhibitors) {
+	public void setAceInhibitors(Boolean aceInhibitors) {
 		this.aceInhibitors = aceInhibitors;
 	}
-	public boolean isSwelling() {
+	public Boolean getSwelling() {
 		return swelling;
 	}
-	public void setSwelling(boolean swelling) {
+	public void setSwelling(Boolean swelling) {
 		this.swelling = swelling;
 	}
-	public boolean isLegUlcer() {
+	public Boolean getLegUlcer() {
 		return legUlcer;
 	}
-	public void setLegUlcer(boolean legUlcer) {
+	public void setLegUlcer(Boolean legUlcer) {
 		this.legUlcer = legUlcer;
 	}
-	public boolean isHepatobillaryInvolvement() {
+	public Boolean getHepatobillaryInvolvement() {
 		return hepatobillaryInvolvement;
 	}
-	public void setHepatobillaryInvolvement(boolean hepatobillaryInvolvement) {
+	public void setHepatobillaryInvolvement(Boolean hepatobillaryInvolvement) {
 		this.hepatobillaryInvolvement = hepatobillaryInvolvement;
 	}
-	public boolean isGallstone() {
+	public Boolean getGallstone() {
 		return gallstone;
 	}
-	public void setGallstone(boolean gallstone) {
+	public void setGallstone(Boolean gallstone) {
 		this.gallstone = gallstone;
 	}
-	public boolean isCholecystectomy() {
+	public Boolean getCholecystectomy() {
 		return cholecystectomy;
 	}
-	public void setCholecystectomy(boolean cholecystectomy) {
+	public void setCholecystectomy(Boolean cholecystectomy) {
 		this.cholecystectomy = cholecystectomy;
 	}
 	public double getsBilirubinTotal() {
@@ -491,76 +526,76 @@ public class Complications {
 	public void setsBilirubinDirect(double sBilirubinDirect) {
 		this.sBilirubinDirect = sBilirubinDirect;
 	}
-	public boolean isHepatitisBAntigen() {
+	public Boolean getHepatitisBAntigen() {
 		return hepatitisBAntigen;
 	}
-	public void setHepatitisBAntigen(boolean hepatitisBAntigen) {
+	public void setHepatitisBAntigen(Boolean hepatitisBAntigen) {
 		this.hepatitisBAntigen = hepatitisBAntigen;
 	}
-	public boolean isAntiHAV() {
+	public Boolean getAntiHAV() {
 		return antiHAV;
 	}
-	public void setAntiHAV(boolean antiHAV) {
+	public void setAntiHAV(Boolean antiHAV) {
 		this.antiHAV = antiHAV;
 	}
-	public boolean isAntiHCV() {
+	public Boolean getAntiHCV() {
 		return antiHCV;
 	}
-	public void setAntiHCV(boolean antiHCV) {
+	public void setAntiHCV(Boolean antiHCV) {
 		this.antiHCV = antiHCV;
 	}
-	public boolean isHepaticEncephalopathy() {
+	public Boolean getHepaticEncephalopathy() {
 		return hepaticEncephalopathy;
 	}
-	public void setHepaticEncephalopathy(boolean hepaticEncephalopathy) {
+	public void setHepaticEncephalopathy(Boolean hepaticEncephalopathy) {
 		this.hepaticEncephalopathy = hepaticEncephalopathy;
 	}
-	public boolean isPriapism() {
+	public Boolean getPriapism() {
 		return priapism;
 	}
-	public void setPriapism(boolean priapism) {
+	public void setPriapism(Boolean priapism) {
 		this.priapism = priapism;
 	}
-	public boolean isManagedAtHome() {
+	public Boolean getManagedAtHome() {
 		return managedAtHome;
 	}
-	public void setManagedAtHome(boolean managedAtHome) {
+	public void setManagedAtHome(Boolean managedAtHome) {
 		this.managedAtHome = managedAtHome;
 	}
-	public boolean isManagedAtHospital() {
+	public Boolean getManagedAtHospital() {
 		return managedAtHospital;
 	}
-	public void setManagedAtHospital(boolean managedAtHospital) {
+	public void setManagedAtHospital(Boolean managedAtHospital) {
 		this.managedAtHospital = managedAtHospital;
 	}
-	public boolean isIntracavernosalAspiration() {
+	public Boolean getIntracavernosalAspiration() {
 		return intracavernosalAspiration;
 	}
-	public void setIntracavernosalAspiration(boolean intracavernosalAspiration) {
+	public void setIntracavernosalAspiration(Boolean intracavernosalAspiration) {
 		this.intracavernosalAspiration = intracavernosalAspiration;
 	}
-	public boolean isAlphaAgonist() {
+	public Boolean getAlphaAgonist() {
 		return alphaAgonist;
 	}
-	public void setAlphaAgonist(boolean alphaAgonist) {
+	public void setAlphaAgonist(Boolean alphaAgonist) {
 		this.alphaAgonist = alphaAgonist;
 	}
-	public boolean isExchangeTranfusion() {
+	public Boolean getExchangeTranfusion() {
 		return exchangeTranfusion;
 	}
-	public void setExchangeTranfusion(boolean exchangeTranfusion) {
+	public void setExchangeTranfusion(Boolean exchangeTranfusion) {
 		this.exchangeTranfusion = exchangeTranfusion;
 	}
-	public boolean isSurgicalShunt() {
+	public Boolean getSurgicalShunt() {
 		return surgicalShunt;
 	}
-	public void setSurgicalShunt(boolean surgicalShunt) {
+	public void setSurgicalShunt(Boolean surgicalShunt) {
 		this.surgicalShunt = surgicalShunt;
 	}
-	public boolean isErectileDysfunction() {
+	public Boolean getErectileDysfunction() {
 		return erectileDysfunction;
 	}
-	public void setErectileDysfunction(boolean erectileDysfunction) {
+	public void setErectileDysfunction(Boolean erectileDysfunction) {
 		this.erectileDysfunction = erectileDysfunction;
 	}
 	public double getResolutionOfPriapism() {
@@ -569,58 +604,58 @@ public class Complications {
 	public void setResolutionOfPriapism(double resolutionOfPriapism) {
 		this.resolutionOfPriapism = resolutionOfPriapism;
 	}
-	public boolean isSplenicCusis() {
+	public Boolean getSplenicCusis() {
 		return splenicCusis;
 	}
-	public void setSplenicCusis(boolean splenicCusis) {
+	public void setSplenicCusis(Boolean splenicCusis) {
 		this.splenicCusis = splenicCusis;
 	}
-	public boolean isSplBloodTransfusion() {
+	public Boolean getSplBloodTransfusion() {
 		return splBloodTransfusion;
 	}
-	public void setSplBloodTransfusion(boolean splBloodTransfusion) {
+	public void setSplBloodTransfusion(Boolean splBloodTransfusion) {
 		this.splBloodTransfusion = splBloodTransfusion;
 	}
-	public boolean isAplasticCusis() {
+	public Boolean getAplasticCusis() {
 		return aplasticCusis;
 	}
-	public void setAplasticCusis(boolean aplasticCusis) {
+	public void setAplasticCusis(Boolean aplasticCusis) {
 		this.aplasticCusis = aplasticCusis;
 	}
-	public boolean isAplBloodTransfusion() {
+	public Boolean getAplBloodTransfusion() {
 		return aplBloodTransfusion;
 	}
-	public void setAplBloodTransfusion(boolean aplBloodTransfusion) {
+	public void setAplBloodTransfusion(Boolean aplBloodTransfusion) {
 		this.aplBloodTransfusion = aplBloodTransfusion;
 	}
-	public boolean isCardiacInvolvement() {
+	public Boolean getCardiacInvolvement() {
 		return cardiacInvolvement;
 	}
-	public void setCardiacInvolvement(boolean cardiacInvolvement) {
+	public void setCardiacInvolvement(Boolean cardiacInvolvement) {
 		this.cardiacInvolvement = cardiacInvolvement;
 	}
-	public boolean isCardiomegaly() {
+	public Boolean getCardiomegaly() {
 		return cardiomegaly;
 	}
-	public void setCardiomegaly(boolean cardiomegaly) {
+	public void setCardiomegaly(Boolean cardiomegaly) {
 		this.cardiomegaly = cardiomegaly;
 	}
-	public boolean isLeftVentricular() {
+	public Boolean getLeftVentricular() {
 		return leftVentricular;
 	}
-	public void setLeftVentricular(boolean leftVentricular) {
+	public void setLeftVentricular(Boolean leftVentricular) {
 		this.leftVentricular = leftVentricular;
 	}
-	public boolean isPulmonaryHypertension() {
+	public Boolean getPulmonaryHypertension() {
 		return pulmonaryHypertension;
 	}
-	public void setPulmonaryHypertension(boolean pulmonaryHypertension) {
+	public void setPulmonaryHypertension(Boolean pulmonaryHypertension) {
 		this.pulmonaryHypertension = pulmonaryHypertension;
 	}
-	public boolean isDecreasedLVEF() {
+	public Boolean getDecreasedLVEF() {
 		return decreasedLVEF;
 	}
-	public void setDecreasedLVEF(boolean decreasedLVEF) {
+	public void setDecreasedLVEF(Boolean decreasedLVEF) {
 		this.decreasedLVEF = decreasedLVEF;
 	}
 	public String getLvefType() {
@@ -629,46 +664,46 @@ public class Complications {
 	public void setLvefType(String lvefType) {
 		this.lvefType = lvefType;
 	}
-	public boolean isEyeInvolvement() {
+	public Boolean getEyeInvolvement() {
 		return eyeInvolvement;
 	}
-	public void setEyeInvolvement(boolean eyeInvolvement) {
+	public void setEyeInvolvement(Boolean eyeInvolvement) {
 		this.eyeInvolvement = eyeInvolvement;
 	}
-	public boolean isSickleRetinopathy() {
+	public Boolean getSickleRetinopathy() {
 		return sickleRetinopathy;
 	}
-	public void setSickleRetinopathy(boolean sickleRetinopathy) {
+	public void setSickleRetinopathy(Boolean sickleRetinopathy) {
 		this.sickleRetinopathy = sickleRetinopathy;
 	}
-	public boolean isNeovascularization() {
+	public Boolean getNeovascularization() {
 		return neovascularization;
 	}
-	public void setNeovascularization(boolean neovascularization) {
+	public void setNeovascularization(Boolean neovascularization) {
 		this.neovascularization = neovascularization;
 	}
-	public boolean isVitreousHemorrphage() {
+	public Boolean getVitreousHemorrphage() {
 		return vitreousHemorrphage;
 	}
-	public void setVitreousHemorrphage(boolean vitreousHemorrphage) {
+	public void setVitreousHemorrphage(Boolean vitreousHemorrphage) {
 		this.vitreousHemorrphage = vitreousHemorrphage;
 	}
-	public boolean isRetinalDetachment() {
+	public Boolean getRetinalDetachment() {
 		return retinalDetachment;
 	}
-	public void setRetinalDetachment(boolean retinalDetachment) {
+	public void setRetinalDetachment(Boolean retinalDetachment) {
 		this.retinalDetachment = retinalDetachment;
 	}
-	public boolean isRetinalBreaks() {
+	public Boolean getRetinalBreaks() {
 		return retinalBreaks;
 	}
-	public void setRetinalBreaks(boolean retinalBreaks) {
+	public void setRetinalBreaks(Boolean retinalBreaks) {
 		this.retinalBreaks = retinalBreaks;
 	}
-	public boolean isIronOverloaded() {
+	public Boolean getIronOverloaded() {
 		return ironOverloaded;
 	}
-	public void setIronOverloaded(boolean ironOverloaded) {
+	public void setIronOverloaded(Boolean ironOverloaded) {
 		this.ironOverloaded = ironOverloaded;
 	}
 	public String getIronOverloadedType() {
@@ -677,28 +712,28 @@ public class Complications {
 	public void setIronOverloadedType(String ironOverloadedType) {
 		this.ironOverloadedType = ironOverloadedType;
 	}
-	public boolean isHistoryOfInfection() {
+	public Boolean getHistoryOfInfection() {
 		return historyOfInfection;
 	}
-	public void setHistoryOfInfection(boolean historyOfInfection) {
+	public void setHistoryOfInfection(Boolean historyOfInfection) {
 		this.historyOfInfection = historyOfInfection;
 	}
-	public boolean isHospitalAddmission() {
+	public Boolean getHospitalAddmission() {
 		return hospitalAddmission;
 	}
-	public void setHospitalAddmission(boolean hospitalAddmission) {
+	public void setHospitalAddmission(Boolean hospitalAddmission) {
 		this.hospitalAddmission = hospitalAddmission;
 	}
-	public boolean isBloodCulture() {
+	public Boolean getBloodCulture() {
 		return bloodCulture;
 	}
-	public void setBloodCulture(boolean bloodCulture) {
+	public void setBloodCulture(Boolean bloodCulture) {
 		this.bloodCulture = bloodCulture;
 	}
-	public boolean isBloodCulturePosOrNeg() {
+	public Boolean getBloodCulturePosOrNeg() {
 		return bloodCulturePosOrNeg;
 	}
-	public void setBloodCulturePosOrNeg(boolean bloodCulturePosOrNeg) {
+	public void setBloodCulturePosOrNeg(Boolean bloodCulturePosOrNeg) {
 		this.bloodCulturePosOrNeg = bloodCulturePosOrNeg;
 	}
 	public String getOrganism() {
@@ -707,40 +742,40 @@ public class Complications {
 	public void setOrganism(String organism) {
 		this.organism = organism;
 	}
-	public boolean isVaccination() {
+	public Boolean getVaccination() {
 		return vaccination;
 	}
-	public void setVaccination(boolean vaccination) {
+	public void setVaccination(Boolean vaccination) {
 		this.vaccination = vaccination;
 	}
-	public boolean isHibVaccine() {
+	public Boolean getHibVaccine() {
 		return hibVaccine;
 	}
-	public void setHibVaccine(boolean hibVaccine) {
+	public void setHibVaccine(Boolean hibVaccine) {
 		this.hibVaccine = hibVaccine;
 	}
-	public boolean isPheumococcalVaccine() {
+	public Boolean getPheumococcalVaccine() {
 		return pheumococcalVaccine;
 	}
-	public void setPheumococcalVaccine(boolean pheumococcalVaccine) {
+	public void setPheumococcalVaccine(Boolean pheumococcalVaccine) {
 		this.pheumococcalVaccine = pheumococcalVaccine;
 	}
-	public boolean isMeningococcalVaccine() {
+	public Boolean getMeningococcalVaccine() {
 		return meningococcalVaccine;
 	}
-	public void setMeningococcalVaccine(boolean meningococcalVaccine) {
+	public void setMeningococcalVaccine(Boolean meningococcalVaccine) {
 		this.meningococcalVaccine = meningococcalVaccine;
 	}
-	public boolean isTyphoidVaccine() {
+	public Boolean getTyphoidVaccine() {
 		return typhoidVaccine;
 	}
-	public void setTyphoidVaccine(boolean typhoidVaccine) {
+	public void setTyphoidVaccine(Boolean typhoidVaccine) {
 		this.typhoidVaccine = typhoidVaccine;
 	}
-	public boolean isFluVaccine() {
+	public Boolean getFluVaccine() {
 		return fluVaccine;
 	}
-	public void setFluVaccine(boolean fluVaccine) {
+	public void setFluVaccine(Boolean fluVaccine) {
 		this.fluVaccine = fluVaccine;
 	}
 	public String getTypeOfInfection() {
@@ -748,12 +783,6 @@ public class Complications {
 	}
 	public void setTypeOfInfection(String typeOfInfection) {
 		this.typeOfInfection = typeOfInfection;
-	}
-	public PatientInformation getPatientInfoByReg() {
-		return patientInfoByReg;
-	}
-	public void setPatientInfoByReg(PatientInformation patientInfoByReg) {
-		this.patientInfoByReg = patientInfoByReg;
 	}
 	
 	

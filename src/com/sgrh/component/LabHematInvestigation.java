@@ -53,6 +53,8 @@ public class LabHematInvestigation {
 	private double hba2;
 	private double hbs;
 	
+	private String impression;
+	
 	// impression
 	@Column(name="hb_retention_time")
 	private double hbRetentionTime;
@@ -64,7 +66,7 @@ public class LabHematInvestigation {
 	private String hplcDetectionResult;
 	
 	@Column(name="hph_inclusion")
-	private double hbhInclusion;
+	private String hbhInclusion;
 	
 	@Column(name="unstable_hemoglobin")
 	private double unstableHemoglobin;
@@ -183,10 +185,10 @@ public class LabHematInvestigation {
 	public void setHplcDetectionResult(String hplcDetectionResult) {
 		this.hplcDetectionResult = hplcDetectionResult;
 	}
-	public double getHbhInclusion() {
+	public String getHbhInclusion() {
 		return hbhInclusion;
 	}
-	public void setHbhInclusion(double hbhInclusion) {
+	public void setHbhInclusion(String hbhInclusion) {
 		this.hbhInclusion = hbhInclusion;
 	}
 	public double getUnstableHemoglobin() {
@@ -204,4 +206,12 @@ public class LabHematInvestigation {
 	public void setRegNo(String regNo) {
 		this.regNo = regNo;
 	}
+	public String getImpression() {
+		return impression;
+	}
+	public void setImpression(String impression) {
+		this.impression = impression;
+	}
+	
+	
 }

@@ -62,8 +62,25 @@ public class Examination {
 	private Integer currentAgeMonth;
 	
 	// Family History
+	@Column(name="similar_effected_sibling")
+	private boolean similarEffectedSibling;
+	
+	@Column(name="effected_family_member")
+	private boolean effectedFamilyMember;
+	
+	@Column(name="family_member_details")
+	private String familyMemberDetails;
 	
 	// Current Symptoms
+	@Column(name="current_fatigue")
+	private boolean currentFatigue;
+	
+	@Column(name="current_recurrent_fever")
+	private boolean currentRecurrentFever;
+	
+	@Column(name="current_pallor")
+	private boolean currentPallor;
+	
 	@Column(name="current_dyspnoea")
 	private boolean currentDyspnoea;
 	
@@ -79,15 +96,15 @@ public class Examination {
 	@Column(name="current_jaundice")
 	private boolean currentJaundice;
 	
-	@Column(name="current_any_other")
-	private boolean currentAnyOther;
 	
 	@Column(name="other_symptoms")
-	private String otherSymptoms;
+	private String currentOtherSymptoms;
 	
 	// At the time of examination
-	private double height; // ? Z score
-	private double weight;
+	private Double height; // ? Z score
+	private Double heightZscore; 
+	private Double weight;
+	private Double weightZscore;
 	
 	@Column(name="exam_hemolyctic_facies")
 	private boolean examHemolycticfacies;
@@ -98,8 +115,8 @@ public class Examination {
 	@Column(name="exam_jaundice")
 	private boolean examJaundice;
 	
-	@Column(name="exam_endema")
-	private boolean examEndema;
+	@Column(name="exam_edema")
+	private boolean examEdema;
 	
 	@Column(name="exam_leg_ulcer")
 	private boolean examLegUlcer;
@@ -236,36 +253,44 @@ public class Examination {
 		this.currentJaundice = currentJaundice;
 	}
 
-	public boolean isCurrentAnyOther() {
-		return currentAnyOther;
+	public String getCurrentOtherSymptoms() {
+		return currentOtherSymptoms;
 	}
 
-	public void setCurrentAnyOther(boolean currentAnyOther) {
-		this.currentAnyOther = currentAnyOther;
+	public void setCurrentOtherSymptoms(String currentOtherSymptoms) {
+		this.currentOtherSymptoms = currentOtherSymptoms;
 	}
 
-	public String getOtherSymptoms() {
-		return otherSymptoms;
-	}
-
-	public void setOtherSymptoms(String otherSymptoms) {
-		this.otherSymptoms = otherSymptoms;
-	}
-
-	public double getHeight() {
+	public Double getHeight() {
 		return height;
 	}
 
-	public void setHeight(double height) {
+	public void setHeight(Double height) {
 		this.height = height;
 	}
 
-	public double getWeight() {
+	public Double getHeightZscore() {
+		return heightZscore;
+	}
+
+	public void setHeightZscore(Double heightZscore) {
+		this.heightZscore = heightZscore;
+	}
+
+	public Double getWeight() {
 		return weight;
 	}
 
-	public void setWeight(double weight) {
+	public void setWeight(Double weight) {
 		this.weight = weight;
+	}
+
+	public Double getWeightZscore() {
+		return weightZscore;
+	}
+
+	public void setWeightZscore(Double weightZscore) {
+		this.weightZscore = weightZscore;
 	}
 
 	public boolean isExamHemolycticfacies() {
@@ -292,12 +317,12 @@ public class Examination {
 		this.examJaundice = examJaundice;
 	}
 
-	public boolean isExamEndema() {
-		return examEndema;
+	public boolean isExamEdema() {
+		return examEdema;
 	}
 
-	public void setExamEndema(boolean examEndema) {
-		this.examEndema = examEndema;
+	public void setExamEdema(boolean examEdema) {
+		this.examEdema = examEdema;
 	}
 
 	public boolean isExamLegUlcer() {
@@ -367,8 +392,52 @@ public class Examination {
 	public Integer getCurrentAgeMonth() {
 		return currentAgeMonth;
 	}
-	
-	
-	
-	
+
+	public boolean isSimilarEffectedSibling() {
+		return similarEffectedSibling;
+	}
+
+	public void setSimilarEffectedSibling(boolean similarEffectedSibling) {
+		this.similarEffectedSibling = similarEffectedSibling;
+	}
+
+	public boolean isEffectedFamilyMember() {
+		return effectedFamilyMember;
+	}
+
+	public void setEffectedFamilyMember(boolean effectedFamilyMember) {
+		this.effectedFamilyMember = effectedFamilyMember;
+	}
+
+	public String getFamilyMemberDetails() {
+		return familyMemberDetails;
+	}
+
+	public void setFamilyMemberDetails(String familyMemberDetails) {
+		this.familyMemberDetails = familyMemberDetails;
+	}
+
+	public boolean isCurrentFatigue() {
+		return currentFatigue;
+	}
+
+	public void setCurrentFatigue(boolean currentFatigue) {
+		this.currentFatigue = currentFatigue;
+	}
+
+	public boolean isCurrentRecurrentFever() {
+		return currentRecurrentFever;
+	}
+
+	public void setCurrentRecurrentFever(boolean currentRecurrentFever) {
+		this.currentRecurrentFever = currentRecurrentFever;
+	}
+
+	public boolean isCurrentPallor() {
+		return currentPallor;
+	}
+
+	public void setCurrentPallor(boolean currentPallor) {
+		this.currentPallor = currentPallor;
+	}
 }
