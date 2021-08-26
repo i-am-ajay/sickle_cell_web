@@ -17,6 +17,7 @@
 	href="${pageContext.request.contextPath}/static_resources/css/bootstrap.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static_resources/css/style.css">
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 <body id="home">
 
@@ -191,6 +192,8 @@
 	<script
 		src="${pageContext.request.contextPath}/static_resources/js/bootstrap.min.js"></script>
 	<!--<script src="js/navbar-fixed.js"></script>-->
+	
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 	<script>
     $('.port').click(function(){
       $('.section_body').collapse('hide');
@@ -342,7 +345,54 @@
     })
      
      
-    /* ---------------  Complication Section Code Ends -------------------*/
+    /* ---------------  Complication Section Code Ends -------------- */
+    
+    /* ---------------  LAB Investigation Code ---------------------- */
+    $("#y_hplc_id").on("click", e=>{
+		$("#hplc_finding_lable_id").removeClass("text-primary");
+		$("#hplc_finding_id").attr("disabled",false);
+    });
+    $("#n_hplc_id").on("click", e=>{
+    	$("#hplc_finding_lable_id").addClass("text-primary");
+		$("#hplc_finding_id").attr("disabled",true);
+    })
+    // sickling cell test
+     $("#y_sickling_test_id").on("click", e=>{
+		$("#sickling_result_lable_id").removeClass("text-primary");
+		$("#sickling_result_id").attr("disabled",false);
+    });
+    $("#n_sickling_test_id").on("click", e=>{
+    	$("#sickling_result_lable_id").addClass("text-primary");
+		$("#sickling_result_id").attr("disabled",true);
+    })
+    
+/**/
+    $("document").ready(e =>{
+        var values= [
+				{	"id":"HbC disease", 
+					"text":"<div>HbC disease ( &alpha; 2&beta;2 <su>6 Lys</su>, &alpha; 2 &beta;2 <sup>6 Lys</sup> )</div>",
+					"html":"<div>HbC disease ( &alpha; 2&beta;2 <su>6 Lys</su>, &alpha; 2 &beta;2 <sup>6 Lys</sup> )</div>",
+					"title":"HbC disease"
+				}
+        ];
+        
+    	$("#sickle_cell_disease_type_id").select2({
+        	placeholder: "select an option",
+			data : values,
+			escapeMarkup: function(markup) {
+			    return markup;
+			},
+			templateResult: function(data) {
+			    return data.html;
+			},
+			templateSelection: function(data) {
+			    return data.text;
+			}
+        });
+    })
+    
+    
+    
     $('#zip').focusout(
         	function(){
         		var pin = this['value'];

@@ -36,6 +36,9 @@ public class LabMolecularStudies {
 	private boolean alphaThalTest;
 	@Column(name="alpha_thal_test_result")
 	private String alphaThalTestResult;
+	@Column
+	private String alphaThalOtherResult;
+	private boolean hbhDone;
 	private String hbh;
 	@Column(name="beta_thal")
 	private boolean betaThal;
@@ -177,4 +180,17 @@ public class LabMolecularStudies {
 	public String getRegNo() {
 		return regNo;
 	}
+	public String getAlphaThalOtherResult() {
+		return alphaThalOtherResult;
+	}
+	public void setAlphaThalOtherResult(String alphaThalOtherResult) {
+		this.alphaThalOtherResult = alphaThalOtherResult;
+	}
+	public boolean isHbhDone() {
+		return hbhDone;
+	}
+	public void setHbhDone(boolean hbhDone) {
+		this.hbhDone = hbhDone;
+	}
+	
 }
