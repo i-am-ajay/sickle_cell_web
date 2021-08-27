@@ -5,6 +5,14 @@
   border-top-style: solid;
   margin: 3px;
   margin-top: 5px; }
+  
+.special_label{
+	font-size : .9em;
+}
+
+.extra_small_label{
+	font-size:.7em;
+}
 
 .form-control-xs {
   height: calc(1.5em + .5rem + 2px) !important;

@@ -13,6 +13,10 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
 
+/**
+ * @author gaa8664
+ *
+ */
 @Component
 @RequestScope
 @Entity
@@ -27,15 +31,27 @@ public class BioChemicalTest {
 	PatientInformation patientInfoByReg;
 	
 	private double ferritin;
-	private double LDH;
+	private double ldh;
 	private double vitaminB12;
 	private double folate;
-	@Column(name="serum_bilirubin")
-	private double serumBilirubin;
-	@Column(name="asparate_amnio_transferase")
-	private double asparateAmniotransferase;
-	@Column(name="alania_amnio_trans_ferase")
-	private double alaninaAmniotransferase;
+	@Column(name="serum_bilirubin_total")
+	private double serumBilirubinTotal;
+	
+	@Column(name="serum_bilirubin_conjugated")
+	private double serumBilirubinConjugated;
+	
+	@Column(name="asparate_amnio_transferase_alt")
+	private double asparateAmniotransferaseAlt;
+	
+	@Column(name="asparate_amnio_transferase_sgop")
+	private double asparateAmniotransferaseSgop;
+	
+	@Column(name="alania_amnio_trans_ferase_alt")
+	private double alaninaAmniotransferaseAlt;
+	
+	@Column(name="alania_amnio_trans_ferase_sgpt")
+	private double alaninaAmniotransferaseSGPT;
+	
 	@Column(name="serum_alkaline_phosphate")
 	private double serumAlkalinePhosphate;
 	@Column(name="serum_calcium")
@@ -67,11 +83,11 @@ public class BioChemicalTest {
 	public void setFerritin(double ferritin) {
 		this.ferritin = ferritin;
 	}
-	public double getLDH() {
-		return LDH;
+	public double getLdh() {
+		return ldh;
 	}
-	public void setLDH(double lDH) {
-		LDH = lDH;
+	public void setLdh(double ldh) {
+		this.ldh = ldh;
 	}
 	public double getVitaminB12() {
 		return vitaminB12;
@@ -85,24 +101,7 @@ public class BioChemicalTest {
 	public void setFolate(double folate) {
 		this.folate = folate;
 	}
-	public double getSerumBilirubin() {
-		return serumBilirubin;
-	}
-	public void setSerumBilirubin(double serumBilirubin) {
-		this.serumBilirubin = serumBilirubin;
-	}
-	public double getAsparateAmniotransferase() {
-		return asparateAmniotransferase;
-	}
-	public void setAsparateAmniotransferase(double asparateAmniotransferase) {
-		this.asparateAmniotransferase = asparateAmniotransferase;
-	}
-	public double getAlaninaAmniotransferase() {
-		return alaninaAmniotransferase;
-	}
-	public void setAlaninaAmniotransferase(double alaninaAmniotransferase) {
-		this.alaninaAmniotransferase = alaninaAmniotransferase;
-	}
+	
 	public double getSerumAlkalinePhosphate() {
 		return serumAlkalinePhosphate;
 	}
@@ -196,4 +195,41 @@ public class BioChemicalTest {
 	public String getRegNo() {
 		return regNo;
 	}
+	public double getSerumBilirubinTotal() {
+		return serumBilirubinTotal;
+	}
+	public void setSerumBilirubinTotal(double serumBilirubinTotal) {
+		this.serumBilirubinTotal = serumBilirubinTotal;
+	}
+	public double getSerumBilirubinConjugated() {
+		return serumBilirubinConjugated;
+	}
+	public void setSerumBilirubinConjugated(double serumBilirubinConjugated) {
+		this.serumBilirubinConjugated = serumBilirubinConjugated;
+	}
+	public double getAsparateAmniotransferaseAlt() {
+		return asparateAmniotransferaseAlt;
+	}
+	public void setAsparateAmniotransferaseAlt(double asparateAmniotransferaseAlt) {
+		this.asparateAmniotransferaseAlt = asparateAmniotransferaseAlt;
+	}
+	public double getAsparateAmniotransferaseSgop() {
+		return asparateAmniotransferaseSgop;
+	}
+	public void setAsparateAmniotransferaseSgop(double asparateAmniotransferaseSgop) {
+		this.asparateAmniotransferaseSgop = asparateAmniotransferaseSgop;
+	}
+	public double getAlaninaAmniotransferaseAlt() {
+		return alaninaAmniotransferaseAlt;
+	}
+	public void setAlaninaAmniotransferaseAlt(double alaninaAmniotransferaseAlt) {
+		this.alaninaAmniotransferaseAlt = alaninaAmniotransferaseAlt;
+	}
+	public double getAlaninaAmniotransferaseSGPT() {
+		return alaninaAmniotransferaseSGPT;
+	}
+	public void setAlaninaAmniotransferaseSGPT(double alaninaAmniotransferaseSGPT) {
+		this.alaninaAmniotransferaseSGPT = alaninaAmniotransferaseSGPT;
+	}
+	
 }

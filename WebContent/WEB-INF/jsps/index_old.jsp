@@ -156,17 +156,7 @@
 			<jsp:include page="lab_investigation.jsp"></jsp:include>
 
 			<!-- Treatment Details -->
-			<section id="treatment_section"
-				class="collapse section_body ${treatment}">
-				<!-- class="collapse" -->
-				<div id="test"
-					class="bg-warning py-2 text-white text-center headings">Treatment
-					Details</div>
-
-				<!-- Inline Form To add contract details -->
-
-				<div class="form-body bg-light py-2 border text-center"></div>
-			</section>
+			<jsp:include page="treatment_details.jsp"></jsp:include>
 			<!-- Final Diagnosis -->
 			<section id="final_diag_section"
 				class="collapse section_body ${finalDiag}">
