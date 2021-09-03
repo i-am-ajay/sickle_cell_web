@@ -30,7 +30,7 @@ public class PatientInformation {
 	@Column(name="adhar_numbrer")
 	private String adharNumber;
 	
-	private boolean gender;
+	private String gender;
 	
 	@Autowired
 	@Embedded
@@ -102,10 +102,11 @@ public class PatientInformation {
 	public void setAdharNumber(String adharNumber) {
 		this.adharNumber = adharNumber;
 	}
-	public boolean getGender() {
+	
+	public String getGender() {
 		return gender;
 	}
-	public void setGender(boolean gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 	public Relation getFather() {

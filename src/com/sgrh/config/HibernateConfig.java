@@ -23,7 +23,7 @@ public class HibernateConfig {
 	public LocalSessionFactoryBean sessionFactory() {
 		LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
 		sessionFactory.setDataSource(datasource());
-		sessionFactory.setPackagesToScan(new String[]{"com.sgrh.component"});
+		sessionFactory.setPackagesToScan(new String[]{"com.sgrh.component","com.sgrh.component.lookup"});
 		sessionFactory.setHibernateProperties(hibernateProperties());
 		return sessionFactory;
 	}
@@ -47,7 +47,7 @@ public class HibernateConfig {
 	
 	private final Properties hibernateProperties() {
 		Properties prop = new Properties();
-		prop.setProperty("hibernate.dialect","org.hibernate.dialect.MySQLDialect");
+		prop.setProperty("hibernate.dialect","org.hibernate.dialect.MySQL5Dialect");
 		prop.setProperty("hibernate.hbm2ddl.auto", "update");
 		prop.setProperty("hibernate.show_sql", "true");
 		return prop;

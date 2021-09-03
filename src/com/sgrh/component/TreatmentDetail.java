@@ -71,15 +71,16 @@ public class TreatmentDetail {
 	@Column(name="hydroxy_urea")
 	private boolean hydroxyUrea;
 	
-	private int dose;
+	private int hydroxyUreaDose;
 	
-	private String duration;
+	private int hydroxyUreaDurationYear;
+	private int hydroxyUreaDurationMonth;
 	
 	@Column(name="pre_hydroxy_urea")
 	private double preHydroxyurea;
 	
-	@Column(name="pos_hydroxy_urea")
-	private double posHydroxyurea;
+	@Column(name="post_hydroxy_urea")
+	private double postHydroxyurea;
 	
 	@Column(name="pre_hydroxy_urea_frequency")
 	private String preHydroxyureaFrequency;
@@ -94,16 +95,17 @@ public class TreatmentDetail {
 	
 	@Column(name="provide_therapy_details")
 	private String provideTherapyDetails;
+	
 	private boolean chelation;
 	// previous true then
-	@Column(name="chelation_effect")
-	private String chelationEffect;
+	@Column(name="chelation_agent")
+	private String chelationAgent;
 	
-	@Column(name="chelation_year")
-	private int chelationYear;
+	@Column(name="chelation_dosage_year")
+	private int chelationDosageYear;
 	
-	@Column(name="chelation_month")
-	private int chelationMonth;
+	@Column(name="chelation_dosage_month")
+	private int chelationDosageMonth;
 	
 	@Column(name="any_other_medication")
 	private String anyOtherMedication;
@@ -236,20 +238,28 @@ public class TreatmentDetail {
 		this.hydroxyUrea = hydroxyUrea;
 	}
 
-	public int getDose() {
-		return dose;
+	public int getHydroxyUreaDose() {
+		return hydroxyUreaDose;
 	}
 
-	public void setDose(int dose) {
-		this.dose = dose;
+	public void setHydroxyUreaDose(int hydroxyUreaDose) {
+		this.hydroxyUreaDose = hydroxyUreaDose;
 	}
 
-	public String getDuration() {
-		return duration;
+	public int getHydroxyUreaDurationYear() {
+		return hydroxyUreaDurationYear;
 	}
 
-	public void setDuration(String duration) {
-		this.duration = duration;
+	public void setHydroxyUreaDurationYear(int hydroxyUreaDurationYear) {
+		this.hydroxyUreaDurationYear = hydroxyUreaDurationYear;
+	}
+
+	public int getHydroxyUreaDurationMonth() {
+		return hydroxyUreaDurationMonth;
+	}
+
+	public void setHydroxyUreaDurationMonth(int hydroxyUreaDurationMonth) {
+		this.hydroxyUreaDurationMonth = hydroxyUreaDurationMonth;
 	}
 
 	public double getPreHydroxyurea() {
@@ -260,12 +270,12 @@ public class TreatmentDetail {
 		this.preHydroxyurea = preHydroxyurea;
 	}
 
-	public double getPosHydroxyurea() {
-		return posHydroxyurea;
+	public double getPostHydroxyurea() {
+		return postHydroxyurea;
 	}
 
-	public void setPosHydroxyurea(double posHydroxyurea) {
-		this.posHydroxyurea = posHydroxyurea;
+	public void setPosHydroxyurea(double postHydroxyurea) {
+		this.postHydroxyurea = postHydroxyurea;
 	}
 
 	public String getPreHydroxyureaFrequency() {
@@ -316,28 +326,28 @@ public class TreatmentDetail {
 		this.chelation = chelation;
 	}
 
-	public String getChelationEffect() {
-		return chelationEffect;
+	public String getChelationAgent() {
+		return chelationAgent;
 	}
 
-	public void setChelationEffect(String chelationEffect) {
-		this.chelationEffect = chelationEffect;
+	public void setChelationAgent(String chelationAgent) {
+		this.chelationAgent = chelationAgent;
 	}
 
-	public int getChelationYear() {
-		return chelationYear;
+	public int getChelationDosageYear() {
+		return chelationDosageYear;
 	}
 
-	public void setChelationYear(int chelationYear) {
-		this.chelationYear = chelationYear;
+	public void setChelationDosageYear(int chelationDosageYear) {
+		this.chelationDosageYear = chelationDosageYear;
 	}
 
-	public int getChelationMonth() {
-		return chelationMonth;
+	public int getChelationDosageMonth() {
+		return chelationDosageMonth;
 	}
 
-	public void setChelationMonth(int chelationMonth) {
-		this.chelationMonth = chelationMonth;
+	public void setChelationDosageMonth(int chelationDosageMonth) {
+		this.chelationDosageMonth = chelationDosageMonth;
 	}
 
 	public String getAnyOtherMedication() {

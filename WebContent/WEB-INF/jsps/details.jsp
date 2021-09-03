@@ -17,9 +17,9 @@
 							<!-- Left column -->
 							<div class="col-md-2">
 								<div class="form-group text-left">
-									<label class="text-monospace">Registration No</label>
+									<label class="text-monospace">Registration No<sup class="text-danger">*</sup></label>
 									<sf:input class="form-control form-control-sm"
-										id="patient_registration_number" path="registrationNumber" />
+										id="patient_registration_number" path="registrationNumber" required="true"/>
 								</div>
 							</div>
 							<div class="col-md-2">
@@ -41,22 +41,31 @@
 							<div class="col-md-2">
 								<div class="form-group text-left">
 									<label class="text-monospace mr-5">Gender</label>
-									<div class="form-check-inline">
-										<sf:radiobutton class="form-check-input mx-2" id="y_gender_id"
-											value="true" path="gender" />
-										<span class="mx-2"> Yes</span>
-										<sf:radiobutton class="form-check-input ml-4" id="n_gender_id"
-											value="false" path="gender" />
-										<span class="mx-2">No</span>
-									</div>
+									<sf:select id="gender_id"
+						class="form-control form-control-sm"
+						path="gender">
+						<sf:option value="Male">Male</sf:option>
+						<sf:option value="Female">Female</sf:option>
+						<sf:option value="Transgender">Transgender/Not Known</sf:option>
+						</sf:select>
 								</div>
 							</div>
 
 							<div class="col-md-2">
 								<div class="form-group text-left">
 									<label class="text-monospace">Religion</label>
-									<sf:input id="religon_id" class="form-control form-control-sm"
-										path="socioDemo.religion" />
+									<sf:select id="religion_id"
+						class="form-control form-control-sm"
+						path="socioDemo.religion">
+						<c:forEach var="item" items="${religion}">
+							<sf:option value="${item}">${item.description}</sf:option>
+						</c:forEach>
+						<%-- <sf:option value="Hindu">Hindu</sf:option>
+						<sf:option value="Muslim">Muslim</sf:option>
+						<sf:option value="Christian">Christian</sf:option>
+						<sf:option value="Sikh">Sikh</sf:option>
+						<sf:option value="Others">Others</sf:option> --%>
+						</sf:select>
 								</div>
 							</div>
 							<div class="col-md-2">

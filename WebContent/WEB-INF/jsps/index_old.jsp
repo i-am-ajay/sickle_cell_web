@@ -20,9 +20,9 @@
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 <body id="home">
-
+<sf:form method="POST" action="save_data" modelAttribute="patient_info">
 	<div class="mx-auto" style="width: 95%">
-		<sf:form action="/" modelAttribute="patient_info">
+		
 			<!-- Header Section -->
 			<header id="top-section">
 				<div class="row no-gutters" style="margin-left: 0; margin-right: 0">
@@ -157,24 +157,17 @@
 
 			<!-- Treatment Details -->
 			<jsp:include page="treatment_details.jsp"></jsp:include>
-			<!-- Final Diagnosis -->
-			<section id="final_diag_section"
-				class="collapse section_body ${finalDiag}">
-				<!-- class="collapse" -->
-				<div id="test"
-					class="bg-secondary py-2 text-white text-center headings">Final
-					Diagnosis</div>
-
-				<!-- Inline Form To add contract details -->
-
-				<div class="form-body bg-light py-2 border text-center"></div>
-			</section>
-		</sf:form>
+			<jsp:include page="final_diagnosis.jsp"></jsp:include>
+			
+			
+		<!--</sf:form> -->
 		<footer id="footer"
 			class="bg-dark text-white py-2 text-center fixed-bottom">
 			Sir Ganga Ram Copyright <i class="fa fa-copyright"></i> 2019.
 		</footer>
 	</div>
+	<input type="submit" value="Submit" />
+	</sf:form>
 	<script
 		src="${pageContext.request.contextPath}/static_resources/js/jquery.min.js"></script>
 	<script
@@ -184,6 +177,7 @@
 	<!--<script src="js/navbar-fixed.js"></script>-->
 	
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	<script src="${pageContext.request.contextPath}static_resources/js/registration.js"></script>
 	<script>
     $('.port').click(function(){
       $('.section_body').collapse('hide');
