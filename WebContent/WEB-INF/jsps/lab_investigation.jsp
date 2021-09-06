@@ -83,7 +83,7 @@
 						<label class="text-monospace">MCHC</label>
 						<div class="input-group input-group-sm mb-2">
 							<sf:input id="mchc_id" class="form-control form-control-sm"
-								path="hematInvestigation.mchc" />
+								path="hematInvestigation.mchc" placeholder="MCHC"/>
 							<div class="input-group-append">
 								<div class="input-group-text">g/dl</div>
 							</div>
@@ -95,7 +95,7 @@
 						<label class="text-monospace">RBS Count</label>
 						<div class="input-group input-group-sm mb-2">
 							<sf:input id="rbs_count_id" class="form-control form-control-sm"
-								path="hematInvestigation.rbsCount" />
+								path="hematInvestigation.rbsCount" placeholder="RBS Count"/>
 							<div class="input-group-append">
 								<div class="input-group-text">
 									x 10<sup>6</sup>/µl
@@ -153,7 +153,7 @@
 					<div class="form-group text-left">
 						<label class="text-monospace">HbA</label>
 						<sf:input id="hba_id" class="form-control form-control-sm"
-							path="hematInvestigation.hba" />
+							path="hematInvestigation.hba" placeholder="HbA"/>
 					</div>
 				</div>
 
@@ -161,14 +161,14 @@
 					<div class="form-group text-left">
 						<label class="text-monospace">HbF (N<2%) </label>
 						<sf:input id="hbf_id" class="form-control form-control-sm"
-							path="hematInvestigation.hbf" />
+							path="hematInvestigation.hbf" placeholder="HbF"/>
 					</div>
 				</div>
 				<div class="col-md-2">
 					<div class="form-group text-left">
 						<label class="text-monospace">HbA2 (N<3.5%) </label>
 						<sf:input id="hba2_id" class="form-control form-control-sm"
-							path="hematInvestigation.hba2" />
+							path="hematInvestigation.hba2" placeholder="HbA2"/>
 					</div>
 				</div>
 			</div>
@@ -179,7 +179,7 @@
 				<div class="col-md-2">
 					<div class="form-group text-left">
 						<label class="text-monospace">Hbs</label>
-						<sf:input class="form-control form-control-sm" placeholder="hbs"
+						<sf:input class="form-control form-control-sm" placeholder="Hbs"
 							id="wbc_id" path="hematInvestigation.hbs" />
 					</div>
 				</div>
@@ -205,7 +205,7 @@
 						<label class="text-monospace text-primary"
 							id="sickling_result_lable_id">Sickling Test Result</label>
 						<sf:select id="sickling_result_id"
-							class="form-control form-control-sm"
+							class="form-control form-control-sm sickle_test_dep"
 							path="hematInvestigation.sicklingTestResult"
 							placeholder="Sickling Test Result">
 							<sf:option value="true">Positive</sf:option>
@@ -217,7 +217,7 @@
 					<div class="form-group text-left">
 						<label class="text-monospace">Impression</label>
 						<sf:input id="hba_id" class="form-control form-control-sm"
-							path="hematInvestigation.impression" />
+							path="hematInvestigation.impression" placeholder="Impression"/>
 					</div>
 				</div>
 
@@ -225,7 +225,7 @@
 					<div class="form-group text-left">
 						<label class="text-monospace">Unstable Haemoglobin</label>
 						<sf:input id="hbf_id" class="form-control form-control-sm"
-							path="hematInvestigation.unstableHemoglobin" />
+							path="hematInvestigation.unstableHemoglobin" placeholder="Unstable Haemoglobin"/>
 					</div>
 				</div>
 				<div class="col-md-2">
@@ -235,6 +235,7 @@
 							placeholder="Rec Cell Morphology"
 							class="form-control form-control-sm"
 							path="hematInvestigation.redCellMorphology">
+							<sf:option value=""></sf:option>
 							<sf:option value="Hypochromic">Hypochromic</sf:option>
 							<sf:option value="Microcytic">Microcytic</sf:option>
 							<sf:option value="Anisocytosis">Anisocytosis</sf:option>
@@ -282,7 +283,7 @@
 					<div class="form-group text-left">
 						<label class="text-monospace text-primary"
 							id="hplc_finding_lable_id">HPLC Findings</label>
-						<sf:input class="form-control form-control-sm"
+						<sf:input class="form-control form-control-sm hplc_dep"
 							placeholder="HPLC Findings" id="hplc_finding_id"
 							path="hematInvestigation.hplcDetectionResult" disabled="true" />
 					</div>
@@ -317,10 +318,11 @@
 				<div class="col-md-2">
 					<div class="form-group text-left">
 						<label class="text-monospace mr-5">Disease Type</label>
-						<sf:select id="sickle_cell_disease_type_id_id"
+						<sf:select id="sickle_cell_disease_type_id"
 							placeholder="Rec Cell Morphology"
-							class="form-control form-control-sm"
+							class="form-control form-control-sm sickle_cell_disease_dep"
 							path="molecularStudies.sickleCellDiseaseType">
+							<sf:option value=""></sf:option>
 							<sf:option value="Hb SS">Hb SS ( &alpha;2&beta;2<sup>6
 									val</sup>, &alpha;2&beta;2<sup>6 val</sup> )</sf:option>
 							<sf:option value="HbAS">HbAS( &alpha;2&beta;2, &alpha;2&beta;2<span
@@ -371,8 +373,9 @@
 						<label class="text-monospace mr-5">Alpha Thal Result</label>
 						<sf:select id="alpha_thal_result_id"
 							placeholder="Alpha Thal Result"
-							class="form-control form-control-sm"
+							class="form-control form-control-sm alpha_thal_dep"
 							path="molecularStudies.alphaThalTestResult">
+							<sf:option value=""></sf:option>
 							<sf:option value="1">&alpha;&alpha;/ &alpha;&alpha;</sf:option>
 							<sf:option value="2">&alpha;&alpha;/ &alpha;&alpha;3.7</sf:option>
 							<sf:option value="3">-&alpha;3.7/-&alpha;3.7</sf:option>
@@ -404,10 +407,10 @@
 						<label class="text-monospace">HBH Done</label><br />
 						<div class="form-check-inline mx-2">
 							<sf:radiobutton class="form-check-input mx-2" id="y_hbh_id"
-								value="true" path="molecularStudies.hbh" />
+								value="true" path="molecularStudies.hbhDone" />
 							<span class="mx-2"> Yes</span>
 							<sf:radiobutton class="form-check-input ml-4" id="n_hbh_id"
-								value="false" path="molecularStudies.hbh" />
+								value="false" path="molecularStudies.hbhDone" />
 							<span class="mx-2">No</span>
 						</div>
 					</div>
@@ -416,9 +419,10 @@
 					<div class="form-group text-left">
 						<label class="text-monospace mr-5">HBH Result</label>
 						<sf:select id="alpha_thal_result_id"
-							placeholder="Alpha Thal Result"
-							class="form-control form-control-sm"
-							path="molecularStudies.alphaThalTestResult">
+							placeholder="Hbh Result"
+							class="form-control form-control-sm hbh_dep"
+							path="molecularStudies.hbh">
+							<sf:option value=""></sf:option>
 							<sf:option value="1">-&alpha;3.7/ --SA</sf:option>
 							<sf:option value="2">-&alpha;3.7/ --SEA</sf:option>
 							<sf:option value="3">-&alpha;4.2/ --SA</sf:option>
@@ -444,8 +448,9 @@
 						<label class="text-monospace mr-5">Beta Thal Result</label>
 						<sf:select id="beta_thal_result_id"
 							placeholder="Alpha Thal Result"
-							class="form-control form-control-sm"
+							class="form-control form-control-sm beta_thal_dep"
 							path="molecularStudies.betaThalTestResult">
+							<sf:option value=""></sf:option>
 							<sf:option value="1">IVS 1 nt 5G&#8594;C</sf:option>
 							<sf:option value="2">CD 15G A</sf:option>
 							<sf:option value="3">CD 41/42-CTTT</sf:option>
@@ -463,6 +468,7 @@
 						<sf:select id="interpretation_id" placeholder="Alpha Thal Result"
 							class="form-control form-control-sm"
 							path="molecularStudies.interpretation">
+							<sf:option value=""></sf:option>
 							<sf:option value="Heterozygote">Heterozygote</sf:option>
 							<sf:option value="Homozygote">Homozygote</sf:option>
 							<sf:option value="Compound Heterozygote">Compound Heterozygote</sf:option>
@@ -471,8 +477,8 @@
 				</div>
 				<div class="col-md-2">
 					<div class="form-group text-left">
-						<label class="text-monospace mr-5">Delta Beta Thal</label>
-						<sf:input id="interpretation_id" placeholder="Alpha Thal Result"
+						<label class="text-monospace mr-5">HPFH</label>
+						<sf:input id="interpretation_id" placeholder="HPFH Test Result"
 							class="form-control form-control-sm" path="molecularStudies.hpfh" />
 					</div>
 				</div>

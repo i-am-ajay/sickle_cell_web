@@ -1,207 +1,249 @@
 .border-length {
-  border-length: 80%;
-  border-top-color: #DFDFDF;
-  border-top-width: 1px;
-  border-top-style: solid;
-  margin: 3px;
-  margin-top: 5px; }
-  
-.special_label{
-	font-size : .9em;
+	border-length: 80%;
+	border-top-color: #DFDFDF;
+	border-top-width: 1px;
+	border-top-style: solid;
+	margin: 3px;
+	margin-top: 5px;
 }
 
-.extra_small_label{
-	font-size:.7em;
+.special_label {
+	font-size: .9em;
+}
+
+.extra_small_label {
+	font-size: .7em;
 }
 
 .form-control-xs {
-  height: calc(1.5em + .5rem + 2px) !important;
-  padding: .125rem .25rem !important;
-  font-size: .75rem !important;
-  line-height: 1.5;
-  border-radius: .2rem; }
-
-.btn-xs{
-  height: calc(1.5em + .5em + 2px) !important;
-  padding: .125rem .25rem !important;
-  font-size: .75rem !important;
-  border-radius: .2rem;
-  text-align: center; 
+	height: calc(1.5em + .5rem + 2px) !important;
+	padding: .125rem .25rem !important;
+	font-size: .75rem !important;
+	line-height: 1.5;
+	border-radius: .2rem;
 }
+
+.btn-xs {
+	height: calc(1.5em + .5em + 2px) !important;
+	padding: .125rem .25rem !important;
+	font-size: .75rem !important;
+	border-radius: .2rem;
+	text-align: center;
+}
+
 .headings {
-  font-size: 1.5em; 
+	font-size: 1.5em;
 }
 
-.title{
+.title {
 	font-size: 1.2em;
 }
 
-.port-item:hover{
-	opacity : 0.5;
+.port-item:hover {
+	opacity: 0.5;
 	cursor: pointer;
 }
 
-.row{
-	margin-left : 5px;
-	margin-right : 5px;
+.row {
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
 #top-section img {
-  height: 180px;
-  width: 100%; 
+	height: 180px;
+	width: 100%;
 }
 
 #top-section #empcode {
-  font-size: 0.5em; }
+	font-size: 0.5em;
+}
 
 #top-section #designation {
-  background-color: #000; }
+	background-color: #000;
+}
 
 #top-section #social-media .fa {
-  font-size: 2em; }
+	font-size: 2em;
+}
 
 #top-section .port-item {
-  font-size: 2em; }
+	font-size: 2em;
+}
 
 /* Details Section style elements*/
 #details_section {
-  margin-bottom: 50px;
-  font-size: 1.1em; }
-  
-  #details_section input[type=text] {
-    color: #000;
-    font-size: 0.8em;
-    font-weight: bold; }
-  #details_section #details_button {
-    margin-top: -10px; }
-  #details_section #second-row {
-    margin-bottom: 0px; }
-  #details_section #distt_style {
-    font-size: 0.8em; }
-  #details_section .row {
-    margin-top: 2px; }
-  #details_section .right-section {
-    padding: 0px;
-    padding-top: 3px; }
-  #details_section .address_section {
-    padding-left: 45px;
-    padding-right: 35px;
-    margin-left: -12px; }
-    
-  #details_section .border_bottom{
-  	margin : 5px;
-  	margin-bottom : 5px;
-  	box-shadow : 0 3px rgba(2, 117, 216,1);
-  }
-  
-  #details_section input{
-  	border-color: rgba(2, 117, 216,0.3);
-  }
+	margin-bottom: 50px;
+	font-size: 1.1em;
+}
+
+#details_section input {
+	border-color: rgba(2, 117, 216, 0.3);
+}
+#details_section select {
+	border-color: rgba(2, 117, 216, 0.3);
+}
+#details_section input[type=text] {
+	color: #000;
+	font-size: 0.8em;
+	/*font-weight: bold;*/
+}
+
+#details_section #details_button {
+	margin-top: -10px;
+}
+
+#details_section #second-row {
+	margin-bottom: 0px;
+}
+
+#details_section #distt_style {
+	font-size: 0.8em;
+}
+
+#details_section .row {
+	margin-top: 2px;
+}
+
+#details_section .right-section {
+	padding: 0px;
+	padding-top: 3px;
+}
+
+#details_section .address_section {
+	padding-left: 45px;
+	padding-right: 35px;
+	margin-left: -12px;
+}
+
+#details_section .border_bottom {
+	margin: 5px;
+	margin-bottom: 5px;
+	box-shadow: 0 3px rgba(2, 117, 216, 1);
+}
+
+
 
 /* Feature Section Style Elements*/
 #feature_section {
-  margin-bottom: 50px; 
-  font-size: 1.1em;
-  }
-  #feature_section table thead {
-    color: #ffffff;
-    background-color: rgba(41, 43, 44, 0.9); }
-    
-#feature_section .border_bottom{
-	margin : 5px;
-  	margin-bottom : 5px;
-  	box-shadow : 0 3px rgba(92, 184, 92,1);
+	margin-bottom: 50px;
+	font-size: 1.1em;
 }
 
-#feature_section input{
-  	border-color: rgba(92, 184, 92,0.3);
-  }
-#feature_section select{
-  	border-color: rgba(92, 184, 92,0.3);
-  }
+#feature_section table thead {
+	color: #ffffff;
+	background-color: rgba(41, 43, 44, 0.9);
+}
+
+#feature_section .border_bottom {
+	margin: 5px;
+	margin-bottom: 5px;
+	box-shadow: 0 3px rgba(92, 184, 92, 1);
+}
+
+#feature_section input {
+	border-color: rgba(92, 184, 92, 0.3);
+}
+
+#feature_section select {
+	border-color: rgba(92, 184, 92, 0.3);
+}
 
 /*Complication Section Style Elements*/
 #complication_section {
-  margin-bottom: 50px; 
-  font-size: 1.1em;}
-  #complication_section table thead {
-    color: #ffffff;
-    background-color: rgba(41, 43, 44, 0.9); }
-  #complication_section table td {
-    height: 10px; }
-  #complication_section #promotion_form {
-    margin: 5px;
-    box-shadow: 0 3px rgba(44, 132, 154, 0.8); }
-  #complication_section #btn {
-    p: 0px; }
-    
-  #complication_section input{
-  	border-color: rgba(91, 192, 222,0.3);
-  }
-  #complication_section select{
-  	border-color: rgba(91, 192, 222,0.3);
-  }
-    
-/* Lab Investigation Section Style Elements */
-
-#investigation_section {
-  margin-bottom: 50px;
-  font-size: 1.1em;
-}
-#investigation_section input{
-  	border-color: rgba(217, 83, 79,0.3);
-  }
-#investigation_section select{
-  	border-color: rgba(217, 83, 79,0.3);
-  }
-  
-.input-group-text{
-	border-color: rgba(217, 83, 79,0.3);
-}
-  
-#investigation_section .border_bottom{
-  	margin : 5px;
-  	margin-bottom : 5px;
-  	box-shadow : 0 3px rgba(217, 83, 79,1);
-  }
-  
-/* Treatment Section Style Elements*/
-#treatment_section{
 	margin-bottom: 50px;
-  	font-size: 1.1em;
+	font-size: 1.1em;
 }
-#treatment_section input{
-  	border-color: rgba(240, 173, 78,0.3);
-  }
-#treatment_section select{
-  	border-color: rgba(240, 173, 78,0.3);
-  }
-  
-#treatment_section .border_bottom{
-  	margin : 5px;
-  	margin-bottom : 5px;
-  	box-shadow : 0 3px rgba(240, 173, 78,1);
-  }
+
+#complication_section table thead {
+	color: #ffffff;
+	background-color: rgba(41, 43, 44, 0.9);
+}
+
+#complication_section table td {
+	height: 10px;
+}
+
+#complication_section #promotion_form {
+	margin: 5px;
+	box-shadow: 0 3px rgba(44, 132, 154, 0.8);
+}
+
+#complication_section #btn {
+	p: 0px;
+}
+
+#complication_section input {
+	border-color: rgba(91, 192, 222, 0.3);
+}
+
+#complication_section select {
+	border-color: rgba(91, 192, 222, 0.3);
+}
+
+/* Lab Investigation Section Style Elements */
+#investigation_section {
+	margin-bottom: 50px;
+	font-size: 1.1em;
+}
+
+#investigation_section input {
+	border-color: rgba(217, 83, 79, 0.3);
+}
+
+#investigation_section select {
+	border-color: rgba(217, 83, 79, 0.3);
+}
+
+.input-group-text {
+	border-color: rgba(217, 83, 79, 0.3);
+}
+
+#investigation_section .border_bottom {
+	margin: 5px;
+	margin-bottom: 5px;
+	box-shadow: 0 3px rgba(217, 83, 79, 1);
+}
+
+/* Treatment Section Style Elements*/
+#treatment_section {
+	margin-bottom: 50px;
+	font-size: 1.1em;
+}
+
+#treatment_section input {
+	border-color: rgba(240, 173, 78, 0.3);
+}
+
+#treatment_section select {
+	border-color: rgba(240, 173, 78, 0.3);
+}
+
+#treatment_section .border_bottom {
+	margin: 5px;
+	margin-bottom: 5px;
+	box-shadow: 0 3px rgba(240, 173, 78, 1);
+}
 
 /* Final Diag Section Style Elements */
-#final_diag_section{
+#final_diag_section {
 	margin-bottom: 50px;
-  	font-size: 1.1em;
+	font-size: 1.1em;
 }
-#final_diag_section input{
-  	border-color: rgba(41, 43, 44,0.3);
-  }
-#final_diag_section select{
-  	border-color: rgba(41, 43, 44,0.3);
-  }
-  
-/*Footer Style*/
 
+#final_diag_section input {
+	border-color: rgba(41, 43, 44, 0.3);
+}
+
+#final_diag_section select {
+	border-color: rgba(41, 43, 44, 0.3);
+}
+
+/*Footer Style*/
 #footer {
-  font-size: 0.7em;
-  margin-top: 100px; }
-  
-#social-media{
+	font-size: 0.7em;
+	margin-top: 100px;
+}
+
+#social-media {
 	margin-bottom: 200px;
 }
-

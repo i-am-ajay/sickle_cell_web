@@ -50,16 +50,16 @@ public class LabMolecularStudies {
 	@Column(name="delta_beta_thal")
 	private String deltaBetaThal;
 	@Column(name="current_investigation_year")
-	private int currentInvestigationYear;
+	private Integer currentInvestigationYear;
 	@Column(name="current_investigation_month")
-	private int currentInvestigationMonth;
-	private double meanPerTransfusion;
+	private Integer currentInvestigationMonth;
+	private Double meanPerTransfusion;
 	@Column(name="mean_per_transfusion")
-	private double postTransfusion;
+	private Double postTransfusion;
 	// hiv/hbsag/hcv test
-	private String hiv;
-	private String hbsag;
-	private String hcv;
+	private boolean hiv;
+	private boolean hbsag;
+	private boolean hcv;
 	
 	
 	
@@ -129,46 +129,48 @@ public class LabMolecularStudies {
 	public void setDeltaBetaThal(String deltaBetaThal) {
 		this.deltaBetaThal = deltaBetaThal;
 	}
-	public int getCurrentInvestigationYear() {
+	
+	public Integer getCurrentInvestigationYear() {
 		return currentInvestigationYear;
 	}
-	public void setCurrentInvestigationYear(int currentInvestigationYear) {
+	public void setCurrentInvestigationYear(Integer currentInvestigationYear) {
 		this.currentInvestigationYear = currentInvestigationYear;
 	}
-	public int getCurrentInvestigationMonth() {
+	public Integer getCurrentInvestigationMonth() {
 		return currentInvestigationMonth;
 	}
-	public void setCurrentInvestigationMonth(int currentInvestigationMonth) {
+	public void setCurrentInvestigationMonth(Integer currentInvestigationMonth) {
 		this.currentInvestigationMonth = currentInvestigationMonth;
 	}
-	public double getMeanPerTransfusion() {
+	public Double getMeanPerTransfusion() {
 		return meanPerTransfusion;
 	}
-	public void setMeanPerTransfusion(double meanPerTransfusion) {
+	public void setMeanPerTransfusion(Double meanPerTransfusion) {
 		this.meanPerTransfusion = meanPerTransfusion;
 	}
-	public double getPostTransfusion() {
+	public Double getPostTransfusion() {
 		return postTransfusion;
 	}
-	public void setPostTransfusion(double postTransfusion) {
+	public void setPostTransfusion(Double postTransfusion) {
 		this.postTransfusion = postTransfusion;
 	}
-	public String getHiv() {
+	
+	public boolean isHiv() {
 		return hiv;
 	}
-	public void setHiv(String hiv) {
+	public void setHiv(boolean hiv) {
 		this.hiv = hiv;
 	}
-	public String getHbsag() {
+	public boolean isHbsag() {
 		return hbsag;
 	}
-	public void setHbsag(String hbsag) {
+	public void setHbsag(boolean hbsag) {
 		this.hbsag = hbsag;
 	}
-	public String getHcv() {
+	public boolean isHcv() {
 		return hcv;
 	}
-	public void setHcv(String hcv) {
+	public void setHcv(boolean hcv) {
 		this.hcv = hcv;
 	}
 	public PatientInformation getPatientInfoByReg() {
@@ -192,6 +194,7 @@ public class LabMolecularStudies {
 	public void setHbhDone(boolean hbhDone) {
 		this.hbhDone = hbhDone;
 	}
-	
-	
+	public void setRegNo(String regNo) {
+		this.regNo = regNo;
+	}
 }

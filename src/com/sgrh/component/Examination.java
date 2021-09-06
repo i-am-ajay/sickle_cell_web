@@ -440,4 +440,10 @@ public class Examination {
 	public void setCurrentPallor(boolean currentPallor) {
 		this.currentPallor = currentPallor;
 	}
+
+	public void setRegNo(String regNo) {
+		this.regNo = regNo;
+	}
+	
+	
 }

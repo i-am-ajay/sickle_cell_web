@@ -46,20 +46,20 @@
 				<div class="form-group text-left">
 					<label class="text-monospace">Complication of Iron Overload</label><br />
 					<div class="form-check-inline">
-						<sf:radiobutton class="form-check-input mx-2" id="y_chelation_id"
-							value="true" path="treatmentDetails.chelation" />
+						<sf:radiobutton class="form-check-input mx-2" id="y_final_ironoverload_id"
+							value="true" path="finalDiagnosis.ironOverloadComplication" />
 						<span class="mx-2">Yes</span>
-						<sf:radiobutton class="form-check-input ml-4" id="n_chelation_id"
-							value="false" path="treatmentDetails.chelation" />
+						<sf:radiobutton class="form-check-input ml-4" id="n_final_ironoverload_id"
+							value="false" path="finalDiagnosis.ironOverloadComplication" />
 						<span class="mx-2">No</span>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-6">
 				<div class="form-group text-left">
-					<label class="text-monospace text-danger">Iron Overload Details</label>
-					<sf:input id="disease_type_id" class="form-control form-control-sm"
-						path="finalDiagnosis.otherDisease" />
+					<label class="text-monospace">Iron Overload Details</label>
+					<sf:input id="iron_overload_complication_id" class="form-control form-control-sm ironoverload_dep"
+						path="finalDiagnosis.ironOverloadDetails" />
 				</div>
 			</div>
 		</div>

@@ -10,10 +10,10 @@ import org.springframework.web.context.annotation.RequestScope;
 @RequestScope
 public class Contact {
 	@Column(name="mobile_no_mother",length=10)
-	private int mobileNoMother;
+	private String mobileNoMother;
 	
 	@Column(name="mobile_no_father", length=10)
-	private int mobileNoFather;
+	private String mobileNoFather;
 	
 	@Column(name="land_line_number")
 	private String landLineNumber;
@@ -21,18 +21,21 @@ public class Contact {
 	@Column(name="email")
 	private String email;
 	
-	public int getMobileNoMother() {
+	public String getMobileNoMother() {
 		return mobileNoMother;
 	}
-	public void setMobileNoMother(int mobileNoMother) {
-		this.mobileNoMother = mobileNoMother;
-	}
-	public int getMobileNoFather() {
+	public String getMobileNoFather() {
 		return mobileNoFather;
 	}
-	public void setMobileNoFather(int mobileNoFather) {
+
+	public void setMobileNoFather(String mobileNoFather) {
 		this.mobileNoFather = mobileNoFather;
 	}
+
+	public void setMobileNoMother(String mobileNoMother) {
+		this.mobileNoMother = mobileNoMother;
+	}
+
 	public String getLandLineNumber() {
 		return landLineNumber;
 	}

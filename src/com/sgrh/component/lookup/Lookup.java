@@ -12,12 +12,13 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 
 @Entity
-@DiscriminatorColumn(name="type")
-@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
-public abstract class Lookup {
+public class Lookup {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
+	
+	@Column
+	private String type;
 	
 	@Column
 	private String description;
@@ -33,5 +34,11 @@ public abstract class Lookup {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
 	}
 }

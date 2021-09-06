@@ -27,18 +27,18 @@ public class LabHematInvestigation {
 	PatientInformation patientInfoByReg;
 	// At the time of diagnosis
 	// Hemat test at diagnosis
-	private double wbc;
-	private double hb;
-	private double mcv;
-	private double mch;
-	private double mchc;
+	private Double wbc;
+	private Double hb;
+	private Double mcv;
+	private Double mch;
+	private Double mchc;
 	@Column(name="rbs_count")
-	private double rbsCount;
-	private double rdw;
-	private double plts;
+	private Double rbsCount;
+	private Double rdw;
+	private Double plts;
 	
 	@Column(name="rectic_count")
-	private double recticCount;
+	private Double recticCount;
 	
 	@Column(name="red_cell_morphology")
 	private String redCellMorphology;	
@@ -48,16 +48,16 @@ public class LabHematInvestigation {
 	// previous true then
 	@Column(name="sickling_test_result")
 	private boolean sicklingTestResult;
-	private double hba;
-	private double hbf;
-	private double hba2;
-	private double hbs;
+	private Double hba;
+	private Double hbf;
+	private Double hba2;
+	private Double hbs;
 	
 	private String impression;
 	
 	// impression
 	@Column(name="hb_retention_time")
-	private double hbRetentionTime;
+	private Double hbRetentionTime;
 	
 	@Column(name="hplc_based_detection")
 	private boolean hplcBasedDetection;
@@ -69,60 +69,60 @@ public class LabHematInvestigation {
 	private String hbhInclusion;
 	
 	@Column(name="unstable_hemoglobin")
-	private double unstableHemoglobin;
+	private Double unstableHemoglobin;
 	
-	public double getWbc() {
+	public Double getWbc() {
 		return wbc;
 	}
-	public void setWbc(double wbc) {
+	public void setWbc(Double wbc) {
 		this.wbc = wbc;
 	}
-	public double getHb() {
+	public Double getHb() {
 		return hb;
 	}
-	public void setHb(double hb) {
+	public void setHb(Double hb) {
 		this.hb = hb;
 	}
-	public double getMcv() {
+	public Double getMcv() {
 		return mcv;
 	}
-	public void setMcv(double mcv) {
+	public void setMcv(Double mcv) {
 		this.mcv = mcv;
 	}
-	public double getMch() {
+	public Double getMch() {
 		return mch;
 	}
-	public void setMch(double mch) {
+	public void setMch(Double mch) {
 		this.mch = mch;
 	}
-	public double getMchc() {
+	public Double getMchc() {
 		return mchc;
 	}
-	public void setMchc(double mchc) {
+	public void setMchc(Double mchc) {
 		this.mchc = mchc;
 	}
-	public double getRbsCount() {
+	public Double getRbsCount() {
 		return rbsCount;
 	}
-	public void setRbsCount(double rbsCount) {
+	public void setRbsCount(Double rbsCount) {
 		this.rbsCount = rbsCount;
 	}
-	public double getRdw() {
+	public Double getRdw() {
 		return rdw;
 	}
-	public void setRdw(double rdw) {
+	public void setRdw(Double rdw) {
 		this.rdw = rdw;
 	}
-	public double getPlts() {
+	public Double getPlts() {
 		return plts;
 	}
-	public void setPlts(double plts) {
+	public void setPlts(Double plts) {
 		this.plts = plts;
 	}
-	public double getRecticCount() {
+	public Double getRecticCount() {
 		return recticCount;
 	}
-	public void setRecticCount(double recticCount) {
+	public void setRecticCount(Double recticCount) {
 		this.recticCount = recticCount;
 	}
 	public String getRedCellMorphology() {
@@ -143,34 +143,34 @@ public class LabHematInvestigation {
 	public void setSicklingTestResult(boolean sicklingTestResult) {
 		this.sicklingTestResult = sicklingTestResult;
 	}
-	public double getHba() {
+	public Double getHba() {
 		return hba;
 	}
-	public void setHba(double hba) {
+	public void setHba(Double hba) {
 		this.hba = hba;
 	}
-	public double getHbf() {
+	public Double getHbf() {
 		return hbf;
 	}
-	public void setHbf(double hbf) {
+	public void setHbf(Double hbf) {
 		this.hbf = hbf;
 	}
-	public double getHba2() {
+	public Double getHba2() {
 		return hba2;
 	}
-	public void setHba2(double hba2) {
+	public void setHba2(Double hba2) {
 		this.hba2 = hba2;
 	}
-	public double getHbs() {
+	public Double getHbs() {
 		return hbs;
 	}
-	public void setHbs(double hbs) {
+	public void setHbs(Double hbs) {
 		this.hbs = hbs;
 	}
-	public double getHbRetentionTime() {
+	public Double getHbRetentionTime() {
 		return hbRetentionTime;
 	}
-	public void setHbRetentionTime(double hbRetentionTime) {
+	public void setHbRetentionTime(Double hbRetentionTime) {
 		this.hbRetentionTime = hbRetentionTime;
 	}
 	public boolean isHplcBasedDetection() {
@@ -191,10 +191,10 @@ public class LabHematInvestigation {
 	public void setHbhInclusion(String hbhInclusion) {
 		this.hbhInclusion = hbhInclusion;
 	}
-	public double getUnstableHemoglobin() {
+	public Double getUnstableHemoglobin() {
 		return unstableHemoglobin;
 	}
-	public void setUnstableHemoglobin(double unstableHemoglobin) {
+	public void setUnstableHemoglobin(Double unstableHemoglobin) {
 		this.unstableHemoglobin = unstableHemoglobin;
 	}
 	public PatientInformation getPatientInfoByReg() {
@@ -211,6 +211,9 @@ public class LabHematInvestigation {
 	}
 	public void setImpression(String impression) {
 		this.impression = impression;
+	}
+	public String getRegNo() {
+		return regNo;
 	}
 	
 	

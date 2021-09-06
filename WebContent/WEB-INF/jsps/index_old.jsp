@@ -17,12 +17,14 @@
 	href="${pageContext.request.contextPath}/static_resources/css/bootstrap.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static_resources/css/style.css">
-<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<link
+	href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+	rel="stylesheet" />
 </head>
 <body id="home">
-<sf:form method="POST" action="save_data" modelAttribute="patient_info">
-	<div class="mx-auto" style="width: 95%">
-		
+	<sf:form method="POST" action="save_data" modelAttribute="patient_info">
+		<div class="mx-auto" style="width: 95%">
+
 			<!-- Header Section -->
 			<header id="top-section">
 				<div class="row no-gutters" style="margin-left: 0; margin-right: 0">
@@ -51,50 +53,6 @@
 							</div>
 
 							<!-- Modal Code -->
-
-							<div class="modal fade" id="user" tabindex="-1" role="dialog"
-								aria-labelledby="exampleModalLabel" aria-hidden="true">
-								<div class="modal-dialog modal-lg" role="document">
-									<div class="modal-content">
-										<div class="modal-header">
-											<h5 class="modal-title" id="exampleModalLabel">User
-												Add/Search</h5>
-											<button type="button" class="close" data-dismiss="modal"
-												aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</div>
-										<div class="modal-body">
-											<div class="form-body bg-light py-2 border text-center">
-												<form action="add_search" method="GET">
-													<div id="search_form" class="form-row p-3 ">
-														<div class="col-lg-8 form-inline">
-															<div class="col-lg-5 col-md-6">
-																<label class="text-secondary font-weight-bold"
-																	for="user_search">Patient Search</label>
-															</div>
-															<div class="col-lg-7 col-md-6">
-																<input id="user_search" type="text" name="user"
-																	class="form-control form-control-xs border border-success"
-																	placeholder="Patient Name" />
-															</div>
-														</div>
-
-														<div id="btn" class="col-lg-4 justify-content-center">
-															<button type="submit"
-																class="btn btn-xs btn-outline-success btn-block">Add/Search</button>
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-secondary"
-												data-dismiss="modal">Close</button>
-										</div>
-									</div>
-								</div>
-							</div>
 
 
 							<!-- Designation Line On the Page -->
@@ -144,30 +102,29 @@
 
 			<!-- Details Section -->
 			<jsp:include page="details.jsp"></jsp:include>
-			
+
 			<!-- Feature Section -->
 			<jsp:include page="feature.jsp"></jsp:include>
-			
+
 			<!-- Complication Section -->
 			<jsp:include page="complication.jsp"></jsp:include>
-			
-			
+
+
 			<!-- Lab Investigation/Result -->
 			<jsp:include page="lab_investigation.jsp"></jsp:include>
 
 			<!-- Treatment Details -->
 			<jsp:include page="treatment_details.jsp"></jsp:include>
 			<jsp:include page="final_diagnosis.jsp"></jsp:include>
-			
-			
-		<!--</sf:form> -->
-		<footer id="footer"
-			class="bg-dark text-white py-2 text-center fixed-bottom">
-			Sir Ganga Ram Copyright <i class="fa fa-copyright"></i> 2019.
-		</footer>
-	</div>
-	<input type="submit" value="Submit" />
+		</div>
+		<div class="broder border-primary text-center mx-auto">
+		<button type="submit" class="btn btn-secondary btn-sm w-50 m-0 text-center" id="submit_button">Submit</button>
+		</div>
 	</sf:form>
+	<footer id="footer"
+		class="bg-dark text-white py-2 text-center fixed-bottom">
+		Sir Ganga Ram Copyright <i class="fa fa-copyright"></i> 2019.
+	</footer>
 	<script
 		src="${pageContext.request.contextPath}/static_resources/js/jquery.min.js"></script>
 	<script
@@ -175,131 +132,249 @@
 	<script
 		src="${pageContext.request.contextPath}/static_resources/js/bootstrap.min.js"></script>
 	<!--<script src="js/navbar-fixed.js"></script>-->
-	
-	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-	<script src="${pageContext.request.contextPath}static_resources/js/registration.js"></script>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}static_resources/js/registration.js"></script>
 	<script>
     $('.port').click(function(){
       $('.section_body').collapse('hide');
     });
+    /*----------------- details field validations and js operations -------------------------------*/
+    	$("#mobile_no_father_id").focusout(e=>{
+			/* if(e.target.value.length != 10){
+				alert("Not a valid number");
+				$("#mobile_no_father_id").focus();
+			}*/
+			//this.focus();
+        })
+    /* ----------------------------- END ----------------------------------------------------------*/
+    /* ---------------- Submit Button Code ------------------------ */
+    	$("#submit_button").click(e=>{
+			alert('hello');
+       	})
+    
+    /* ----------------- Submit Button End Code ------------------ */
     // code snippte to show on radio yes and hide on radio no
   
   /*  -------  Javascript code for complication section ----------*/
+  /*---------- Master Function for form validation ---------------*/
+  	// On load checks
+  	function disableDivContent(divId, disabled){
+		$(divId).find('input').each(function(){
+			$(this).attr('disabled',disabled);
+		})
+		$(divId).find('select').each(function(){
+			$(this).attr('disabled',disabled);
+		})
+  	}
+
+   	function disableClass(classId, disabled){
+   		$(classId).attr('disabled',disabled);
+    }
+
+    function mainDivActiveTest(yDivId,nDivId,mainDivId){
+    	if($(yDivId).is(':checked')){
+			disabledDivContent(mainDivId,false);
+        }
+    	else if($(nDivId).is(':checked')){
+			disableDivContent(mainDivId, true);
+        };
+    }
+    
+    function diactiveComponent(yDivId,nDivId,componentClass){
+    	if($(yDivId).is(':checked')){
+			disableClass(componentClass,false);
+        }
+    	else if($(nDivId).is(':checked')){
+    		disableClass(componentClass,true);
+        };
+    }
+
+    // on Event checks
+    function enableDisableComponent(componentSelector, disabled){
+		$(componentSelector).attr('disabled',disabled);
+    }
+    
+    // on page load
+    $(document).ready(e=>{
+    	mainDivActiveTest('#y_pain_crisis_id','#n_pain_crisis_id','#crisis_div');
+    	mainDivActiveTest('#y_neuro_abnormalities_id','#n_neuro_abnormalities_id','#neuro_abnormalities_div');
+    	mainDivActiveTest('#y_renal_involvement_id','#n_renal_involvement_id','#renal_involvement_div');
+    	mainDivActiveTest('#y_hepatobillary_involvement_id','#n_hepatobillary_involvement_id','#hepatobillary_involvement_div');
+    	mainDivActiveTest('#y_priapism_id','#n_priapism_id','#priapism_div');
+    	mainDivActiveTest('#y_splenic_cusis_id','#n_splenic_cusis_id','#splenic_cusis_div');
+    	mainDivActiveTest('#y_aplastic_cusis_id','#n_aplastic_cusis_id','#aplastic_cusis_div');
+    	mainDivActiveTest('#y_cardiac_involvement_id','#n_cardiac_involvement_id','#cardiac_involvement_div');
+    	mainDivActiveTest('#y_eye_involvement_id','#n_eye_involvement_id','#eye_involvement_div');
+    	mainDivActiveTest('#y_iron_overloaded_id','#n_iron_overloaded_id','#iron_overloaded_div');
+    	mainDivActiveTest('#y_infection_history_id','#n_infection_history_id','#infection_history_div');
+    	mainDivActiveTest('#y_stroke_id','#n_stroke_id','#stroke_div');
+    	mainDivActiveTest('#y_doppler_id','#n_doppler_id','#doppler_div');
+
+    	// Hematlogly Test - Sickling test dependency
+    	diactiveComponent('#y_sickling_test_id','#n_sickling_test_id','.sickle_test_dep');
+    	diactiveComponent('#y_hplc_id','#n_hplc_id','.hplc_dep');
+    	diactiveComponent('#y_sickle_cell_disease_id','#n_sickle_cell_disease_id','.sickle_cell_disease_dep');
+    	diactiveComponent('#y_alpha_thal_id','#n_alpha_thal_id','.alpha_thal_dep');
+    	diactiveComponent('#y_hbh_id','#n_hbh_id','.hbh_dep');
+    	diactiveComponent('#y_beta_thal_id','#n_beta_thal_id','.beta_thal_dep');
+    	
+
+    	// treatment details page
+    	diactiveComponent('#y_mbt_id','#n_mbt_id','.mbt_dep');
+    	diactiveComponent('#y_splenectomy_id','#n_splenectomy_id','.splenectomy_dep');
+    	diactiveComponent('#y_treatment_transfusion_id','#n_treatment_transfusion_id','.treatment_transfusion_dept');
+    	diactiveComponent('#y_treatment_hydroxyurea_id','#n_treatment_hydroxyurea_id','.treatment_hydroxyurea_dep');
+    	diactiveComponent('#y_treatment_chelation_id','#n_treatment_chelation_id','.chelation_dep');
+    	diactiveComponent('#y_final_ironoverload_id','#n_final_ironoverload_id','.ironoverload_dep');
+
+    	// accute chest syndrom test.
+    	$("#accute_chest_syndrom_id").val()
+    });
     // for pain crisis
     $('#y_pain_crisis_id').click(e=>{
 		$('#crisis_div').collapse('show');
+		disableDivContent("#crisis_div",false);
     });
     
     $('#n_pain_crisis_id').click(e=>{
 		$('#crisis_div').collapse('hide');
+		disableDivContent("#crisis_div",true);
     });
+    
     
     // neuro abnormalities doppler 
    $("#y_neuro_abnormalities_id").click(e =>{
 		$("#neuro_abnormalities_div").collapse('show');
+		disableDivContent("#neuro_abnormalities_div",false);
      });
      
     $("#n_neuro_abnormalities_id").click(e=>{
 		$("#neuro_abnormalities_div").collapse('hide');
+		disableDivContent("#neuro_abnormalities_div",true);
     });
     
 	// hide or show stroke div
     $("#y_stroke_id").click(e =>{
 		$("#stroke_div").collapse('show');
+		disableDivContent("#stroke_div",false);
      });
      
     $("#n_stroke_id").click(e=>{
 		$("#stroke_div").collapse('hide');
+		disableDivContent("#stroke_div",true);
     });
     
 	// Hide and Show doppler div
     $("#y_doppler_id").click(e =>{
 		$("#doppler_div").collapse('show');
+		disableDivContent("#doppler_div",false);
      });
      
     $("#n_doppler_id").click(e=>{
 		$("#doppler_div").collapse('hide');
+		disableDivContent("#doppler_div",true);
     });
 
 
     // Hide or show renal involvement div
     $("#y_renal_involvement_id").click(e =>{
 		$("#renal_involvement_div").collapse('show');
+		disableDivContent("#renal_involvement_div",false);
      });
      
     $("#n_renal_involvement_id").click(e=>{
 		$("#renal_involvement_div").collapse('hide');
+		disableDivContent("#renal_involvement_div",true);
     });
 
   	 // Hide or show hepatobillaryinvolvement div
       $("#y_hepatobillary_involvement_id").click(e =>{
   		$("#hepatobillary_involvement_div").collapse('show');
+  		disableDivContent("#hepatobillary_involvement_div",false);
        });
        
       $("#n_hepatobillary_involvement_id").click(e=>{
   		$("#hepatobillary_involvement_div").collapse('hide');
+  		disableDivContent("#hepatobillary_involvement_div",true);
       });
   	
    // Hide or show renal involvement div
       $("#y_priapism_id").click(e =>{
   		$("#priapism_div").collapse('show');
+  		disableDivContent("#priapism_div",false);
        });
        
       $("#n_priapism_id").click(e=>{
   		$("#priapism_div").collapse('hide');
+  		disableDivContent("#priapism_div",true);
       }); 
 
 
    // Hide or show Splenic Sequcstration Cusis
       $("#y_splenic_cusis_id").click(e =>{
-  		$("#spl_blood_transfusion_div").collapse('show');
+  		$("#splenic_cusis_div").collapse('show');
+  		disableDivContent("#splenic_cusis_div",false);
        });
        
       $("#n_splenic_cusis_id").click(e=>{
-  		$("#spl_blood_transfusion_div").collapse('hide');
+  		$("#splenic_cusis_div").collapse('hide');
+  		disableDivContent("#splenic_cusis_div",true);
       }); 
 
    // Hide or show Aplastic Cusis div
       $("#y_aplastic_cusis_id").click(e =>{
-  		$("#apl_blood_transfusion_div").collapse('show');
+  		$("#aplastic_cusis_div").collapse('show');
+  		disableDivContent("#aplastic_cusis_div",false);
        });
        
       $("#n_aplastic_cusis_id").click(e=>{
-  		$("#apl_blood_transfusion_div").collapse('hide');
+  		$("#aplastic_cusis_div").collapse('hide');
+  		disableDivContent("#aplastic_cusis_div",true);
       }); 
    // Hide or show Cardiact Involvement div
       $("#y_cardiac_involvement_id").click(e =>{
   		$("#cardiac_involvement_div").collapse('show');
+  		disableDivContent("#cardiac_involvement_div",false);
        });
        
       $("#n_cardiac_involvement_id").click(e=>{
   		$("#cardiac_involvement_div").collapse('hide');
+  		disableDivContent("#cardiac_involvement_div",true);
       }); 
    // Hide or show Eye Involvement div
       $("#y_eye_involvement_id").click(e =>{
   		$("#eye_involvement_div").collapse('show');
+  		disableDivContent("#eye_involvement_div",false);
        });
        
       $("#n_eye_involvement_id").click(e=>{
   		$("#eye_involvement_div").collapse('hide');
+  		disableDivContent("#eye_involvement_div",true);
       }); 
 
    // Hide or show Iron overloaded div
       $("#y_iron_overloaded_id").click(e =>{
   		$("#iron_overloaded_div").collapse('show');
+  		disableDivContent("#iron_overloaded_div",false);
        });
        
       $("#n_iron_overloaded_id").click(e=>{
   		$("#iron_overloaded_div").collapse('hide');
+  		disableDivContent("#iron_overloaded_div",true);
       }); 
 
    // Hide or show History of Infection div
       $("#y_infection_history_id").click(e =>{
   		$("#infection_history_div").collapse('show');
+  		disableDivContent("#infection_history_div",false);
        });
        
       $("#n_infection_history_id").click(e=>{
   		$("#infection_history_div").collapse('hide');
+  		disableDivContent("#infection_history_div",true);
       }); 
 
     $("document").ready(e =>{
@@ -350,6 +425,89 @@
 		$("#sickling_result_id").attr("disabled",true);
     })
     
+    // enable or disable sickle cell test results in microbiology lab
+    // For alpha thal
+    $("#y_alpha_thal_id").on("click",e=>{
+		$(".alpha_thal_dep").attr("disabled",false);
+    })
+    $("#n_alpha_thal_id").on("click",e=>{
+    	$(".alpha_thal_dep").attr("disabled",true);
+    })
+    
+    // For beta thal
+    $("#y_sickle_cell_disease_id").on("click",e=>{
+		$(".sickle_cell_disease_dep").attr("disabled",false);
+    })
+    $("#n_sickle_cell_disease_id").on("click",e=>{
+    	$(".sickle_cell_disease_dep").attr("disabled",true);
+    })
+    
+    //
+     $("#y_hbh_id").on("click",e=>{
+		$(".hbh_dep").attr("disabled",false);
+    })
+    $("#n_hbh_id").on("click",e=>{
+    	$(".hbh_dep").attr("disabled",true);
+    })
+    //
+     $("#y_beta_thal_id").on("click",e=>{
+		$(".beta_thal_dep").attr("disabled",false);
+    })
+    $("#n_beta_thal_id").on("click",e=>{
+    	$(".beta_thal_dep").attr("disabled",true);
+    })
+    
+    // treatment details
+    $("#y_mbt_id").on("click",e=>{
+		$(".mbt_dep").attr("disabled",false);
+    })
+    $("#n_mbt_id").on("click",e=>{
+    	$(".mbt_dep").attr("disabled",true);
+    })
+    
+    // splenectomy
+     $("#y_splenectomy_id").on("click",e=>{
+		$(".splenectomy_dep").attr("disabled",false);
+    })
+    $("#n_splenectomy_id").on("click",e=>{
+    	$(".splenectomy_dep").attr("disabled",true);
+    })
+    
+    // transfusion
+    $("#y_treatment_transfusion_id").on("click",e=>{
+		$(".treatment_transfusion_dept").attr("disabled",false);
+    })
+    
+    $("#n_treatment_transfusion_id").on("click",e=>{
+    	$(".treatment_transfusion_dept").attr("disabled",true);
+    })
+    
+    // hydroxy urea
+    $("#y_treatment_hydroxyurea_id").on("click",e=>{
+		$(".treatment_hydroxyurea_dep").attr("disabled",false);
+    })
+    
+    $("#n_treatment_hydroxyurea_id").on("click",e=>{
+    	$(".treatment_hydroxyurea_dep").attr("disabled",true);
+    })
+    
+     // Chelation
+    $("#y_treatment_chelation_id").on("click",e=>{
+		$(".chelation_dep").attr("disabled",false);
+    })
+    
+    $("#n_treatment_chelation_id").on("click",e=>{
+    	$(".chelation_dep").attr("disabled",true);
+    })
+    
+    // final diagnosis
+    $("#y_final_ironoverload_id").on("click",e=>{
+		$(".ironoverload_dep").attr("disabled",false);
+    })
+    
+    $("#n_final_ironoverload_id").on("click",e=>{
+    	$(".ironoverload_dep").attr("disabled",true);
+    })
 /**/
     $("document").ready(e =>{
         var values= [
@@ -360,7 +518,7 @@
 				}
         ];
         
-    	$("#sickle_cell_disease_type_id").select2({
+    	$("#sickle_cell_disease_type").select2({
         	placeholder: "select an option",
 			data : values,
 			escapeMarkup: function(markup) {

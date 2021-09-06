@@ -1,11 +1,17 @@
 package com.sgrh.component;
 
 import javax.persistence.Column;
+import javax.persistence.ConstraintMode;
 import javax.persistence.Embeddable;
+import javax.persistence.ForeignKey;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
+
+import com.sgrh.component.lookup.OccupationCode;
 
 @Component
 @Scope("prototype")
@@ -54,4 +60,5 @@ public class Relation {
 	public void setRelationOccupation(String relationOccupation) {
 		this.relationOccupation = relationOccupation;
 	}
+
 }

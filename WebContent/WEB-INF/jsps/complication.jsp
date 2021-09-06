@@ -61,11 +61,11 @@
 					<div class="form-group row text-left">
 						<label class="text-monospace col-md-6">Accute Chest
 							Syndrom</label>
-						<sf:select id="pallor_id"
+						<sf:select id="accute_chest_syndrom_id"
 							class="form-control form-control-sm col-md-2"
-							path="complications.acuteChestSyndrom" placeholder="Pallor">
+							path="complications.acuteChestSyndrom" placeholder="Accute Chest Syndrom">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -77,7 +77,7 @@
 							path="complications.o2Support" placeholder="O2 Support"
 							disabled="true">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -88,6 +88,7 @@
 							class="form-control form-control-sm col-md-6"
 							path="complications.O2SupportType" placeholder="Pallor"
 							disabled="true">
+							<sf:option value=""></sf:option>
 							<sf:option value="O2 Mask/Prongs">O2 mask/prongs</sf:option>
 							<sf:option value="NIV">NIV</sf:option>
 							<sf:option value="Ventilator">Ventilator</sf:option>
@@ -105,7 +106,7 @@
 							class="form-control form-control-sm col-md-2"
 							path="complications.exchangeTransfusion" placeholder="Pallor">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -116,7 +117,7 @@
 							class="form-control form-control-sm col-md-6"
 							path="complications.hydroxyurea" placeholder="hydroxyurea">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -129,7 +130,7 @@
 							path="complications.hyperHemolyticCrisis"
 							placeholder="Hyper Hemolytic Crisis">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -212,7 +213,7 @@
 								class="form-control form-control-sm col-md-2"
 								path="complications.neuroimaging" placeholder="Neuroimaging">
 								<sf:option value="true">Yes</sf:option>
-								<sf:option value="false">No</sf:option>
+								<sf:option value="false" selected="true">No</sf:option>
 							</sf:select>
 						</div>
 					</div>
@@ -223,16 +224,16 @@
 						<div class="form-group row text-left">
 							<label class="text-monospace col-md-6">CT</label>
 							<sf:select id="ct_id"
-								class="form-control form-control-sm col-md-2"
-								path="complications.ct" placeholder="Pallor">
+								class="form-control form-control-sm col-md-2 neuroimaging_dep"
+								path="complications.ct" placeholder="CT">
 								<sf:option value="true">Yes</sf:option>
-								<sf:option value="false">No</sf:option>
+								<sf:option value="false" selected="true">No</sf:option>
 							</sf:select>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<sf:input id="ctDetails_id"
-							class="form-control form-control-sm col-md-11 ml-3"
+							class="form-control form-control-sm col-md-11 ml-3 neuroimaging_dep"
 							path="complications.ctDetails" placeholder="CT Findings" />
 					</div>
 				</div>
@@ -242,16 +243,16 @@
 						<div class="form-group row text-left">
 							<label class="text-monospace col-md-6">MRI</label>
 							<sf:select id="ct_id"
-								class="form-control form-control-sm col-md-2"
+								class="form-control form-control-sm col-md-2 neuroimaging_dep"
 								path="complications.mri" placeholder="MRI">
 								<sf:option value="true">Yes</sf:option>
-								<sf:option value="false">No</sf:option>
+								<sf:option value="false" selected="true">No</sf:option>
 							</sf:select>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<sf:input id="mriDetails_id"
-							class="form-control form-control-sm col-md-11 ml-3"
+							class="form-control form-control-sm col-md-11 ml-3 neuroimaging_dep"
 							path="complications.mriDetails" placeholder="MRI Findings" />
 					</div>
 				</div>
@@ -266,7 +267,7 @@
 								path="complications.recBloodTransfusion"
 								placeholder="Sample Blood Transfusion">
 								<sf:option value="true">Yes</sf:option>
-								<sf:option value="false">No</sf:option>
+								<sf:option value="false" selected="true">No</sf:option>
 							</sf:select>
 						</div>
 					</div>
@@ -279,7 +280,7 @@
 								path="complications.recExchangeTransfusion"
 								placeholder="hydroxyurea">
 								<sf:option value="true">Yes</sf:option>
-								<sf:option value="false">No</sf:option>
+								<sf:option value="false" selected="true">No</sf:option>
 							</sf:select>
 						</div>
 					</div>
@@ -302,7 +303,7 @@
 								class="form-control form-control-sm col-md-2"
 								path="complications.seizures" placeholder="Seizures">
 								<sf:option value="true">Yes</sf:option>
-								<sf:option value="false">No</sf:option>
+								<sf:option value="false" selected="true">No</sf:option>
 							</sf:select>
 						</div>
 					</div>
@@ -315,7 +316,7 @@
 								path="complications.cognitiveDysfunction"
 								placeholder="Cognitive Dysfunction">
 								<sf:option value="true">Yes</sf:option>
-								<sf:option value="false">No</sf:option>
+								<sf:option value="false" selected="true">No</sf:option>
 							</sf:select>
 						</div>
 					</div>
@@ -327,7 +328,7 @@
 								path="complications.anyOtherDeficits"
 								placeholder="Other Deficits">
 								<sf:option value="true">Yes</sf:option>
-								<sf:option value="false">No</sf:option>
+								<sf:option value="false" selected="true">No</sf:option>
 							</sf:select>
 						</div>
 					</div>
@@ -366,7 +367,7 @@
 								path="complications.ischemicAttack"
 								placeholder="Transient Ischemic Attack">
 								<sf:option value="true">Yes</sf:option>
-								<sf:option value="false">No</sf:option>
+								<sf:option value="false" selected="true">No</sf:option>
 							</sf:select>
 						</div>
 					</div>
@@ -378,7 +379,7 @@
 								path="complications.neuropathicPain"
 								placeholder="neuropathicPain">
 								<sf:option value="true">Yes</sf:option>
-								<sf:option value="false">No</sf:option>
+								<sf:option value="false" selected="true">No</sf:option>
 							</sf:select>
 						</div>
 					</div>
@@ -395,7 +396,7 @@
 								path="complications.otherNeurologicalAbnormalities"
 								placeholder="Other Neurological Abnormalities">
 								<sf:option value="true">Yes</sf:option>
-								<sf:option value="false">No</sf:option>
+								<sf:option value="false" selected="true">No</sf:option>
 							</sf:select>
 						</div>
 					</div>
@@ -440,7 +441,7 @@
 							path="complications.facialPuffiness"
 							placeholder="Facial Puffiness">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -453,7 +454,7 @@
 							path="complications.decreasedUrineOutput"
 							placeholder="Decreased Urine Output">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -464,7 +465,7 @@
 							class="form-control form-control-sm col-md-5"
 							path="complications.bloodInUrine" placeholder="Blood In Urine">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -488,7 +489,7 @@
 							class="form-control form-control-sm col-md-5"
 							path="complications.urineProtein" placeholder="Urine Protein">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -516,7 +517,7 @@
 							class="form-control form-control-sm col-md-5"
 							path="complications.serumAlbumin" placeholder="Serum Albumin">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -531,7 +532,7 @@
 							class="form-control form-control-sm col-md-5"
 							path="complications.dialysis" placeholder="Urine Protein">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -542,7 +543,7 @@
 							class="form-control form-control-sm col-md-5"
 							path="complications.aceInhibitors" placeholder="Ace Inhibitors">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -555,7 +556,7 @@
 							path="complications.swelling"
 							placeholder="Swelling of Feet/Body Edema">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -612,7 +613,7 @@
 							class="form-control form-control-sm col-md-5"
 							path="complications.gallstone" placeholder="Gal Stones">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -624,7 +625,7 @@
 							path="complications.cholecystectomy"
 							placeholder="Cholecystectomy">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -658,6 +659,7 @@
 							class="form-control form-control-sm col-md-5"
 							path="complications.hepatitisBAntigen"
 							placeholder="Hepatitis-B Antigen">
+							<sf:option value=""></sf:option>
 							<sf:option value="true">Positive</sf:option>
 							<sf:option value="false">Negative</sf:option>
 						</sf:select>
@@ -669,6 +671,7 @@
 						<sf:select id="anti_hav_id"
 							class="form-control form-control-sm col-md-5"
 							path="complications.antiHAV" placeholder="Anti HAV">
+							<sf:option value=""></sf:option>
 							<sf:option value="true">Positive</sf:option>
 							<sf:option value="false">Negative</sf:option>
 						</sf:select>
@@ -680,6 +683,7 @@
 						<sf:select id="anti_hcv_id"
 							class="form-control form-control-sm col-md-5"
 							path="complications.antiHCV" placeholder="Anti HCV">
+							<sf:option value=""></sf:option>
 							<sf:option value="true">Positive</sf:option>
 							<sf:option value="false">Negative</sf:option>
 						</sf:select>
@@ -695,7 +699,7 @@
 							path="complications.hepaticEncephalopathy"
 							placeholder="Hepatic Encephalopathy">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -731,8 +735,9 @@
 						<sf:select id="managed_home_id"
 							class="form-control form-control-sm col-md-5"
 							path="complications.managedAtHome" placeholder="Managed At Home">
+							<sf:option value=""></sf:option>
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -743,8 +748,9 @@
 							class="form-control form-control-sm col-md-5"
 							path="complications.managedAtHospital"
 							placeholder="Managed At Hospital">
+							<sf:option value=""></sf:option>
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -752,10 +758,14 @@
 					<div class="form-group row text-left">
 						<label class="text-monospace col-md-6">Intracavernosal
 							Aspiration</label>
-						<sf:input id="intracavernosal_aspiration_id"
+						<sf:select id="intracavernosal_aspiration_id"
 							class="form-control form-control-sm col-md-5"
 							path="complications.intracavernosalAspiration"
-							placeholder="Intracavernosal Aspiration" />
+							placeholder="Intracavernosal Aspiration">
+							<sf:option value=""></sf:option>
+							<sf:option value="true">Yes</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
+						</sf:select>
 
 					</div>
 				</div>
@@ -763,10 +773,14 @@
 					<div class="form-group row text-left">
 						<label class="text-monospace col-md-6">Use of Alpha
 							Agonist</label>
-						<sf:input id="alpha_agonist_id"
+						<sf:select id="alpha_agonist_id"
 							class="form-control form-control-sm col-md-5"
 							path="complications.alphaAgonist"
-							placeholder="Use of Alpha Agonist" />
+							placeholder="Use of Alpha Agonist">
+							<sf:option value=""></sf:option>
+							<sf:option value="true">Yes</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
+						</sf:select>
 					</div>
 				</div>
 			</div>
@@ -781,7 +795,7 @@
 							path="complications.exchangeTranfusion"
 							placeholder="Exchange transfusion">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -791,6 +805,7 @@
 						<sf:select id="surgical_shunt_id"
 							class="form-control form-control-sm col-md-5"
 							path="complications.surgicalShunt" placeholder="Surgical Shunt">
+							<sf:option value=""></sf:option>
 							<sf:option value="true">Positive</sf:option>
 							<sf:option value="false">Negative</sf:option>
 						</sf:select>
@@ -805,7 +820,7 @@
 							path="complications.erectileDysfunction"
 							placeholder="Erectile Dysfunction">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 
 					</div>
@@ -831,11 +846,11 @@
 						Sequcstration Cusis</label>
 					<div class="form-check-inline col-md-5">
 						<sf:radiobutton class="form-check-input mx-2"
-							data-target="#spl_blood_transfusion_div" id="y_splenic_cusis_id"
+							data-target="#splenic_cusis_div" id="y_splenic_cusis_id"
 							value="true" path="complications.splenicCusis" />
 						<span class="mx-2"> Yes</span>
 						<sf:radiobutton class="form-check-input ml-4"
-							data-target="#spl_blood_transfusion_div" id="n_splenic_cusis_id"
+							data-target="#splenic_cusis_div" id="n_splenic_cusis_id"
 							value="false" path="complications.splenicCusis" />
 						<span class="mx-2">No</span>
 					</div>
@@ -845,7 +860,7 @@
 
 		<!-- *** Splenic Sequcstration Cusis *** -->
 		<div class="collapse border border-dark p-1 pt-3 mt-2 mx-auto"
-			style="width: 90%" id="spl_blood_transfusion_div">
+			style="width: 90%" id="splenic_cusis_div">
 			<!-- *** 7.1 Splenic Sequcstration Cusis Row-1 *** -->
 			<div class="col-md-6">
 				<div class="form-group row text-left">
@@ -854,7 +869,7 @@
 						id="splBlood_transfusion_id"
 						path="complications.splBloodTransfusion">
 						<sf:option value="true">Yes</sf:option>
-						<sf:option value="false">No</sf:option>
+						<sf:option value="false" selected="true">No</sf:option>
 					</sf:select>
 				</div>
 			</div>
@@ -868,11 +883,11 @@
 					<label class="text-monospace col-md-6">Aplastic Cusis</label>
 					<div class="form-check-inline col-md-5">
 						<sf:radiobutton class="form-check-input mx-2"
-							data-target="#apl_blood_transfusion_div" id="y_aplastic_cusis_id"
+							data-target="#aplastic_cusis_div" id="y_aplastic_cusis_id"
 							value="true" path="complications.aplasticCusis" />
 						<span class="mx-2"> Yes</span>
 						<sf:radiobutton class="form-check-input ml-4"
-							data-target="#spl_blood_transfusion_div" id="n_aplastic_cusis_id"
+							data-target="#aplastic_cusis_div" id="n_aplastic_cusis_id"
 							value="false" path="complications.aplasticCusis" />
 						<span class="mx-2">No</span>
 					</div>
@@ -881,7 +896,7 @@
 		</div>
 		<!-- *** Aplastic Cusis *** -->
 		<div class="collapse border border-dark p-1 pt-3 mt-2 mx-auto"
-			style="width: 90%" id="apl_blood_transfusion_div">
+			style="width: 90%" id="aplastic_cusis_div">
 			<!-- *** 7.1 Splenic Sequcstration Cusis Row-1 *** -->
 			<div class="col-md-6">
 				<div class="form-group row text-left">
@@ -890,7 +905,7 @@
 						id="y_splBlood_transfusion_id"
 						path="complications.splBloodTransfusion">
 						<sf:option value="true">Yes</sf:option>
-						<sf:option value="false">No</sf:option>
+						<sf:option value="false" selected="true">No</sf:option>
 					</sf:select>
 				</div>
 			</div>
@@ -928,7 +943,7 @@
 						<sf:select class="form-control form-control-sm col-md-5"
 							id="cardiomegaly_id" path="complications.cardiomegaly">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 
 
@@ -942,7 +957,7 @@
 							id="pulmonary_hypertension_id"
 							path="complications.pulmonaryHypertension">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 
@@ -954,7 +969,7 @@
 						<sf:select class="form-control form-control-sm col-md-5"
 							id="left_ventricular_id" path="complications.leftVentricular">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -968,7 +983,7 @@
 						<sf:select class="form-control form-control-sm col-md-5"
 							id="decreased_lvef_id" path="complications.decreasedLVEF">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -1014,7 +1029,7 @@
 						<sf:select class="form-control form-control-sm col-md-5"
 							id="sickle_retinopathy_id" path="complications.sickleRetinopathy">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -1025,7 +1040,7 @@
 							id="neovascularization_id"
 							path="complications.neovascularization">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -1038,7 +1053,7 @@
 							id="vitreous_hemorrphage_id"
 							path="complications.vitreousHemorrphage">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -1053,7 +1068,7 @@
 						<sf:select class="form-control form-control-sm col-md-5"
 							id="retinal_detachment_id" path="complications.retinalDetachment">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -1064,7 +1079,7 @@
 						<sf:select class="form-control form-control-sm col-md-5"
 							id="retinal_breaks_id" path="complications.retinalBreaks">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -1141,7 +1156,7 @@
 							class="form-control form-control-sm col-md-5"
 							path="complications.hospitalAddmission" placeholder="Gal Stones">
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -1152,10 +1167,11 @@
 							class="form-control form-control-sm col-md-5"
 							path="complications.typeOfInfection"
 							placeholder="Type Of Infection">
-							<sf:option value="true">Pneumonia</sf:option>
-							<sf:option value="false">Sepsis</sf:option>
-							<sf:option value="true">Ostemomyelitis</sf:option>
-							<sf:option value="false">Other</sf:option>
+							<sf:option value=""></sf:option>
+							<sf:option value="Pneumonia">Pneumonia</sf:option>
+							<sf:option value="Sepsis">Sepsis</sf:option>
+							<sf:option value="Ostemomyelitis">Ostemomyelitis</sf:option>
+							<sf:option value="Other">Other</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -1181,11 +1197,12 @@
 				</div>
 				<div class="col-md-3">
 					<div class="form-group row text-left">
-						<label class="text-monospace text-danger col-md-6 culture-lable">Blood
+						<label class="text-monospace col-md-6 culture-lable">Blood
 							Culture Result</label>
 						<sf:select id="culture_result_id"
 							class="form-control form-control-sm col-md-5 culture"
 							path="complications.bloodCulturePosOrNeg">
+							<sf:option value=""></sf:option>
 							<sf:option value="true">Positive</sf:option>
 							<sf:option value="false">Negative</sf:option>
 						</sf:select>
@@ -1193,7 +1210,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="form-group row text-left">
-						<label class="text-monospace text-danger col-md-3 culture-lable">Organism
+						<label class="text-monospace col-md-3 culture-lable">Organism
 							Type</label>
 						<sf:input id="organism_type_id"
 							class="form-control form-control-sm col-md-8 culture"
@@ -1220,37 +1237,40 @@
 				</div>
 				<div class="col-md-3">
 					<div class="form-group row text-left">
-						<label class="text-monospace text-danger col-md-6 vaccine-lable">HIB
+						<label class="text-monospace col-md-6 vaccine-lable">HIB
 							Vaccine</label>
 						<sf:select id="hib_id"
 							class="form-control form-control-sm col-md-5 vaccine"
 							path="complications.hibVaccine">
+							<sf:option value=""></sf:option>
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="form-group row text-left">
-						<label class="text-monospace text-danger col-md-6 vaccine-lable">Pheumococcal
+						<label class="text-monospace col-md-6 vaccine-lable">Pheumococcal
 							Vaccine</label>
 						<sf:select id="pheumococcal_id"
 							class="form-control form-control-sm col-md-5 vaccine"
 							path="complications.pheumococcalVaccine">
+							<sf:option value=""></sf:option>
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="form-group row text-left">
-						<label class="text-monospace text-danger col-md-6 vaccine-lable">Meningococcal
+						<label class="text-monospace col-md-6 vaccine-lable">Meningococcal
 							Vaccine</label>
 						<sf:select id="meningococcal_id"
 							class="form-control form-control-sm col-md-5 vaccine"
 							path="complications.meningococcalVaccine">
+							<sf:option value=""></sf:option>
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
@@ -1262,25 +1282,27 @@
 				</div>
 				<div class="col-md-3">
 					<div class="form-group row text-left">
-						<label class="text-monospace text-danger col-md-6 vaccine-lable">Typhoid
+						<label class="text-monospace col-md-6 vaccine-lable">Typhoid
 							Vaccine</label>
 						<sf:select id="typhoid_id"
 							class="form-control form-control-sm col-md-5 vaccine"
 							path="complications.typhoidVaccine">
+							<sf:option value=""></sf:option>
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="form-group row text-left">
-						<label class="text-monospace text-danger col-md-6 vaccine-lable">Flu
+						<label class="text-monospace col-md-6 vaccine-lable">Flu
 							Vaccine</label>
 						<sf:select id="flu_vaccine_id"
 							class="form-control form-control-sm col-md-5 vaccine"
 							path="complications.fluVaccine">
+							<sf:option value=""></sf:option>
 							<sf:option value="true">Yes</sf:option>
-							<sf:option value="false">No</sf:option>
+							<sf:option value="false" selected="true">No</sf:option>
 						</sf:select>
 					</div>
 				</div>

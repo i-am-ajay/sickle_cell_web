@@ -24,6 +24,7 @@
 						placeholder="Bone Marrow Transplantation"
 						class="form-control form-control-sm"
 						path="treatmentDetails.boneMarrowTransplantation">
+						<sf:option value=""></sf:option>
 						<sf:option value="1">Done</sf:option>
 						<sf:option value="2">Planned</sf:option>
 						<sf:option value="3">No HLA Matched Donor</sf:option>
@@ -47,10 +48,10 @@
 			</div>
 			<div class="col-md-2">
 				<div class="form-group text-left">
-					<label class="text-monospace text-danger"
+					<label class="text-monospace"
 						id="sickling_result_lable_id">MBT Outcome</label>
 					<sf:select id="sickling_result_id"
-						class="form-control form-control-sm"
+						class="form-control form-control-sm mbt_dep"
 						path="treatmentDetails.mbtOutcome" placeholder="MBT Outcome">
 						<sf:option value="Cured">Cured</sf:option>
 						<sf:option value="No Engraftment">No Engraftment</sf:option>
@@ -102,18 +103,18 @@
 				</div>
 			</div>
 			<div class="col-md-4 text-left">
-				<label class="text-monospace text-left text-danger">Age At
+				<label class="text-monospace text-left">Age At
 					Presentation</label>
 				<div class="row">
 					<div class="form-group text-left col-md-6">
 						<sf:input id="splenectomy_presentation_year_id"
-							class="form-control form-control-sm"
+							class="form-control form-control-sm splenectomy_dep"
 							path="treatmentDetails.ageOfSplenectomyYear" placeholder="Year"
 							disabled="true" />
 					</div>
 					<div class="form-group text-left col-md-6">
 						<sf:input id="splenectomy_presentation_year_id"
-							class="form-control form-control-sm"
+							class="form-control form-control-sm splenectomy_dep"
 							path="treatmentDetails.ageOfSplenectomyMonth" Placeholder="Month"
 							disabled="true" />
 					</div>
@@ -127,47 +128,47 @@
 					<label class="text-monospace">Transfusion</label><br />
 					<div class="form-check-inline">
 						<sf:radiobutton class="form-check-input mx-2"
-							id="y_splenectomy_id" value="true"
+							id="y_treatment_transfusion_id" value="true"
 							path="treatmentDetails.tranfusion" />
 						<span class="mx-2"> Yes</span>
 						<sf:radiobutton class="form-check-input ml-4"
-							id="n_splenectomy_id" value="false"
+							id="n_treatment_transfusion_id" value="false"
 							path="treatmentDetails.tranfusion" />
 						<span class="mx-2">No</span>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4 text-left">
-				<label class="text-monospace text-left text-danger">Age Of
+				<label class="text-monospace text-left">Age Of
 					First Transfusion</label>
 				<div class="row">
 					<div class="form-group text-left col-md-6">
 						<sf:input id="first_transfusion_year_id"
-							class="form-control form-control-sm"
+							class="form-control form-control-sm treatment_transfusion_dept"
 							path="treatmentDetails.firstTransfusionYear" placeholder="Year"
 							disabled="true" />
 					</div>
 					<div class="form-group text-left col-md-6">
 						<sf:input id="first_transfusion_month_id"
-							class="form-control form-control-sm"
+							class="form-control form-control-sm treatment_transfusion_dept"
 							path="treatmentDetails.firstTransfusionMonth" Placeholder="Month"
 							disabled="true" />
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4 text-left">
-				<label class="text-monospace text-left text-danger">Frequency
+				<label class="text-monospace text-left">Frequency
 					Of Transfusions</label>
 				<div class="row">
 					<div class="form-group text-left col-md-6">
 						<sf:input id="frequency_per_year_id"
-							class="form-control form-control-sm"
+							class="form-control form-control-sm treatment_transfusion_dept"
 							path="treatmentDetails.frequencyPerYear" placeholder="Year"
 							disabled="true" />
 					</div>
 					<div class="form-group text-left col-md-6">
 						<sf:input id="frequency_per_month_id"
-							class="form-control form-control-sm"
+							class="form-control form-control-sm treatment_transfusion_dept"
 							path="treatmentDetails.frequencyPerMonth" placeholder="Month"
 							disabled="true" />
 					</div>
@@ -180,55 +181,55 @@
 				<div class="form-group text-left">
 					<label class="text-monospace">Hydroxyurea</label><br />
 					<div class="form-check-inline">
-						<sf:radiobutton class="form-check-input mx-2" id="y_chelation_id"
-							value="true" path="treatmentDetails.chelation" />
+						<sf:radiobutton class="form-check-input mx-2" id="y_treatment_hydroxyurea_id"
+							value="true" path="treatmentDetails.hydroxyUrea" />
 						<span class="mx-2"> Yes</span>
-						<sf:radiobutton class="form-check-input ml-4" id="n_chelation_id"
-							value="false" path="treatmentDetails.chelation" />
+						<sf:radiobutton class="form-check-input ml-4" id="n_treatment_hydroxyurea_id"
+							value="false" path="treatmentDetails.hydroxyUrea" />
 						<span class="mx-2">No</span>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4 text-left">
-				<label class="text-monospace text-left text-danger">Duration</label>
+				<label class="text-monospace text-left">Duration</label>
 				<div class="row">
 					<div class="form-group text-left col-md-6">
-						<sf:input id="dosage_year_id" class="form-control form-control-sm"
-							path="treatmentDetails.frequencyPerYear" placeholder="Year"
+						<sf:input id="dosage_year_id" class="form-control form-control-sm treatment_hydroxyurea_dep"
+							path="treatmentDetails.hydroxyUreaDurationYear" placeholder="Year"
 							disabled="true" />
 					</div>
 					<div class="form-group text-left col-md-6">
 						<sf:input id="dosage_month_id"
-							class="form-control form-control-sm"
-							path="treatmentDetails.frequencyPerMonth" placeholder="Month"
+							class="form-control form-control-sm treatment_hydroxyurea_dep"
+							path="treatmentDetails.hydroxyUreaDurationMonth" placeholder="Month"
 							disabled="true" />
 					</div>
 				</div>
 			</div>
 			<div class="col-md-2">
 				<div class="form-group text-left">
-					<label class="text-monospace text-danger">Dosage</label>
+					<label class="text-monospace">Dosage</label>
 					<sf:input id="hydroxyurea_dosage_id"
-						class="form-control form-control-sm"
+						class="form-control form-control-sm treatment_hydroxyurea_dep"
 						path="treatmentDetails.hydroxyUreaDose" />
 				</div>
 			</div>
 
 			<div class="col-md-2">
 				<div class="form-group text-left">
-					<label class="text-monospace text-danger">Pre Hydroxyurea
+					<label class="text-monospace">Pre Hydroxyurea
 						HB</label>
 					<sf:input id="pre_hydroxyurea_id"
-						class="form-control form-control-sm"
+						class="form-control form-control-sm treatment_hydroxyurea_dep"
 						path="treatmentDetails.preHydroxyurea" />
 				</div>
 			</div>
 			<div class="col-md-2">
 				<div class="form-group text-left">
-					<label class="text-monospace text-danger">Post Hydroxyurea
+					<label class="text-monospace">Post Hydroxyurea
 						HB</label>
 					<sf:input id="post_hydroxyurea_id"
-						class="form-control form-control-sm"
+						class="form-control form-control-sm treatment_hydroxyurea_dep"
 						path="treatmentDetails.postHydroxyurea" />
 				</div>
 			</div>
@@ -238,17 +239,17 @@
 		<div class="form-group row mb-0 pb-0">
 			<div class="col-md-2">
 				<div class="form-group text-left">
-					<label class="text-monospace text-danger">Pre Hydroxyurea Transfusion <br/> Frequency</label>
+					<label class="text-monospace">Pre Hydroxyurea Transfusion <br/> Frequency</label>
 					<sf:input id="pre_hydroxyurea_transfusion_frequency_id"
-						class="form-control form-control-sm"
+						class="form-control form-control-sm treatment_hydroxyurea_dep"
 						path="treatmentDetails.preHydroxyureaFrequency" />
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="form-group text-left">
-					<label class="text-monospace text-danger">Effect of Hydroxyurea on pain crisis in sickle cell disease<br/> Patient</label>
+					<label class="text-monospace">Effect of Hydroxyurea On Pain Crisis In Sickle<br/>Cell Disease Patient</label>
 					<sf:input id="pre_hydroxyurea_transfusion_frequency_id"
-						class="form-control form-control-sm"
+						class="form-control form-control-sm treatment_hydroxyurea_dep"
 						path="treatmentDetails.hydroxyureaEffect" />
 				</div>
 			</div>
@@ -267,36 +268,37 @@
 				<div class="form-group text-left">
 					<label class="text-monospace">Chelation</label><br />
 					<div class="form-check-inline">
-						<sf:radiobutton class="form-check-input mx-2" id="y_chelation_id"
-							value="true" path="treatmentDetails.chelation" />
-						<span class="mx-2">Yes</span>
-						<sf:radiobutton class="form-check-input ml-4" id="n_chelation_id"
-							value="false" path="treatmentDetails.chelation" />
+						<sf:radiobutton class="form-check-input mx-2" id="y_treatment_chelation_id"
+							value="true" path="treatmentDetails.chelationField" />
+						<span class="mx-2"> Yes</span>
+						<sf:radiobutton class="form-check-input ml-4" id="n_treatment_chelation_id"
+							value="false" path="treatmentDetails.chelationField" />
 						<span class="mx-2">No</span>
 					</div>
+					
 				</div>
 			</div>
 			<div class="col-md-4 text-left">
-				<label class="text-monospace text-left text-danger">Dosage</label>
+				<label class="text-monospace text-left">Dosage</label>
 				<div class="row">
 					<div class="form-group text-left col-md-6">
-						<sf:input id="dosage_year_id" class="form-control form-control-sm"
-							path="treatmentDetails.frequencyPerYear" placeholder="Year"
+						<sf:input id="dosage_year_id" class="form-control form-control-sm chelation_dep"
+							path="treatmentDetails.chelationDosageYear" placeholder="Year"
 							disabled="true" />
 					</div>
 					<div class="form-group text-left col-md-6">
 						<sf:input id="dosage_month_id"
-							class="form-control form-control-sm"
-							path="treatmentDetails.frequencyPerMonth" placeholder="Month"
+							class="form-control form-control-sm chelation_dep"
+							path="treatmentDetails.chelationDosageMonth" placeholder="Month"
 							disabled="true" />
 					</div>
 				</div>
 			</div>
 			<div class="col-md-2">
 				<div class="form-group text-left">
-					<label class="text-monospace text-danger">Chelation Agent</label>
+					<label class="text-monospace">Chelation Agent</label>
 					<sf:select id="chelation_agent_id"
-						class="form-control form-control-sm vaccine"
+						class="form-control form-control-sm chelation_dep"
 						path="treatmentDetails.chelationAgent">
 						<sf:option value="Deferoxamine">Deferoxamine (Desferal)</sf:option>
 						<sf:option value="Deferasirox">Deferasirox (Exjade)</sf:option>
@@ -314,8 +316,6 @@
 						
 				</div>
 			</div>
-
 		</div>
-
 	</div>
 </section>

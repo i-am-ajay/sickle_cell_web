@@ -85,4 +85,8 @@ public class FinalDiagnosis {
 	public String getRegNo() {
 		return regNo;
 	}
+	public void setRegNo(String regNo) {
+		this.regNo = regNo;
+	}
+	
 }

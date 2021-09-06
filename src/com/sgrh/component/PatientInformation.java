@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -22,12 +24,14 @@ import org.springframework.web.context.annotation.RequestScope;
 public class PatientInformation {
 	@Id
 	@Column(name="registration_number")
+	@NotNull(message="Registration Number is mandatory")
 	private String registrationNumber;
 	
 	@Column(name="patient_name")
 	private String patientName;
 	
 	@Column(name="adhar_numbrer")
+	
 	private String adharNumber;
 	
 	private String gender;
@@ -194,5 +198,23 @@ public class PatientInformation {
 		this.record = record;
 	}
 	
+	public void setIds() {
+		this.bioChemicalTest.setRegNo(this.registrationNumber);
+		this.complications.setRegNo(this.registrationNumber);
+		this.finalDiagnosis.setRegNo(this.registrationNumber);
+		this.hematInvestigation.setRegNo(this.registrationNumber);
+		this.molecularStudies.setRegNo(this.registrationNumber);
+		this.treatmentDetails.setRegNo(this.registrationNumber);
+		this.patientExamination.setRegNo(this.registrationNumber);
+	}
 	
+	public void setAssociation() {
+		this.bioChemicalTest.setPatientInfoByReg(this);
+		this.complications.setPatientInfoByReg(this);
+		this.finalDiagnosis.setPatientInfoByReg(this);
+		this.hematInvestigation.setPatientInfoByReg(this);
+		this.molecularStudies.setPatientInfoByReg(this);
+		this.treatmentDetails.setPatientInfoByReg(this);
+		this.patientExamination.setPatientInfoByReg(this);
+	}
 }
